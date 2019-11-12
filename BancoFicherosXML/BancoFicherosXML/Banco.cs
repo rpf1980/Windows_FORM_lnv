@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace BancoFicherosXML
 {
+    [Serializable()]
+    [XmlRoot("Banco")]
     class Banco
     {
         //Atributos
-        List<Cliente> listaClientes = new List<Cliente>();
+        private List<Cliente> listaClientes = new List<Cliente>();
 
         //Constructores
         public Banco() {}
