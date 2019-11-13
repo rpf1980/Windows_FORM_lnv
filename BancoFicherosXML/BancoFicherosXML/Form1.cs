@@ -11,18 +11,20 @@ using System.Windows.Forms;
 namespace BancoFicherosXML
 {
     public partial class Form1 : Form
-    {      
+    {
+        CamposRegistro formAddcliente = new CamposRegistro();
+
         public Form1()
         {
             InitializeComponent();
         }
 
-        // Btn AÑADIR CLIENTES
+        // Pasamos al siguiente FORM
         private void button1_Click(object sender, EventArgs e)
-        {         
+        {
             // Vamos al form que permite rellenar los campos de 
             // registro de nuestro cliente
-
+            formAddcliente.Show();
         }
     }
 }

@@ -15,11 +15,10 @@ namespace BancoFicherosXML
         private List<Cliente> listaClientes = new List<Cliente>();
 
         //Constructores
-        public Banco() {}
-
-        public Banco(List<Cliente> listaClientes)
+       
+        public Banco()
         {
-            this.ListaClientes = listaClientes;
+            listaClientes = new List<Cliente>();
         }
 
         //Getter && Setter
@@ -30,13 +29,6 @@ namespace BancoFicherosXML
         {
             this.listaClientes.Add(cliente);
         }
-
-        /*private string dni;
-        private string nombre;
-        private string direccion;
-        private int edad;
-        private int tlfn;
-        private int cc;*/
 
         public Cliente ModificarCliente(string dni)
         {

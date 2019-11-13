@@ -1,0 +1,10 @@
+C:\Users\RPF\Documents\GitHub\Windows_FORM_lnv\BancoFicherosXML\BancoFicherosXML\bin\Debug\BancoFicherosXML.exe.config
+C:\Users\RPF\Documents\GitHub\Windows_FORM_lnv\BancoFicherosXML\BancoFicherosXML\bin\Debug\BancoFicherosXML.exe
+C:\Users\RPF\Documents\GitHub\Windows_FORM_lnv\BancoFicherosXML\BancoFicherosXML\bin\Debug\BancoFicherosXML.pdb
+C:\Users\RPF\Documents\GitHub\Windows_FORM_lnv\BancoFicherosXML\BancoFicherosXML\obj\Debug\BancoFicherosXML.csprojAssemblyReference.cache
+C:\Users\RPF\Documents\GitHub\Windows_FORM_lnv\BancoFicherosXML\BancoFicherosXML\obj\Debug\BancoFicherosXML.CamposRegistro.resources
+C:\Users\RPF\Documents\GitHub\Windows_FORM_lnv\BancoFicherosXML\BancoFicherosXML\obj\Debug\BancoFicherosXML.Form1.resources
+C:\Users\RPF\Documents\GitHub\Windows_FORM_lnv\BancoFicherosXML\BancoFicherosXML\obj\Debug\BancoFicherosXML.Properties.Resources.resources
+C:\Users\RPF\Documents\GitHub\Windows_FORM_lnv\BancoFicherosXML\BancoFicherosXML\obj\Debug\BancoFicherosXML.csproj.GenerateResource.cache
+C:\Users\RPF\Documents\GitHub\Windows_FORM_lnv\BancoFicherosXML\BancoFicherosXML\obj\Debug\BancoFicherosXML.exe
+C:\Users\RPF\Documents\GitHub\Windows_FORM_lnv\BancoFicherosXML\BancoFicherosXML\obj\Debug\BancoFicherosXML.pdb
