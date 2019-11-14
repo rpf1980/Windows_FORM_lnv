@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
+using System.Text.RegularExpressions;
 using System.IO;
 
 namespace BancoFicherosXML
@@ -54,22 +55,37 @@ namespace BancoFicherosXML
             tlfn = Convert.ToInt32(idTlfnRegistro.Text);
             cc = Convert.ToInt32(idCCregistro.Text);
 
-            // Damos valores a los atributos del objeto cliente
-            cliente.Dni = strDni;
-            cliente.Nombre = strNombre;
-            cliente.Direccion = strDireccion;
-            cliente.Edad = edad;
-            cliente.Tlfn = tlfn;
-            cliente.Cc = cc;
+            if(texBoxIsEmpty() && DNIvalido(strDni) && ValidarTelefono(tlfn.ToString()))
+            {
+                try
+                {
+                    // Damos valores a los atributos del objeto cliente
+                    cliente.Dni = strDni;
+                    cliente.Nombre = strNombre;
+                    cliente.Direccion = strDireccion;
+                    cliente.Edad = edad;
+                    cliente.Tlfn = tlfn;
+                    cliente.Cc = cc;
 
-            // Añadimos el cliente a la lista del objeto banco
-            banco.AddCliente(cliente);
+                    // Añadimos el cliente a la lista del objeto banco
+                    banco.AddCliente(cliente);
 
-            // Creamos el formateador XML
-            XmlSerializer format = new XmlSerializer(banco.GetType());
-            format.Serialize(fichero, banco);
+                    // Creamos el formateador XML
+                    XmlSerializer format = new XmlSerializer(banco.GetType());
+                    format.Serialize(fichero, banco);
 
-            fichero.Close();
+                    fichero.Close();
+                }
+                catch(IOException ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }               
+            }
+            else
+            {
+                MessageBox.Show("Revise que los campos no estén vacíos.\nCompruebe el correo, la constraseña y que el número" +
+                    "de teléfono sea correcto");
+            }
         }
 
         // LIMPIAR campos del form
@@ -82,5 +98,45 @@ namespace BancoFicherosXML
             idTlfnRegistro.Text = "";
             idCCregistro.Text = "";
         }
+
+        // MÉTODOS APARTE
+
+        // Métodos para validar DNI
+        public bool DNIvalido(string dni)
+        {
+            string patron = "[A-HJ-NP-SUVW][0-9]{7}[0-9A-J]|\\d{8}[TRWAGMYFPDXBNJZSQVHLCKE]|[X]\\d{7}[TRWAGMYFPDXBNJZSQVHLCKE]|[X]\\d{8}[TRWAGMYFPDXBNJZSQVHLCKE]|[YZ]\\d{0,7}[TRWAGMYFPDXBNJZSQVHLCKE]";
+            string sRemp = "";
+            bool ret = false;
+            System.Text.RegularExpressions.Regex rgx = new System.Text.RegularExpressions.Regex(patron);
+            sRemp = rgx.Replace(dni.ToString(), "OK");
+            if (sRemp == "OK") ret = true;
+            return ret;
+        }
+
+        // Método para validar TELÉFONO
+        public bool ValidarTelefono(string strNumero)
+        {
+            Regex regex = new Regex("\\A[0-9]{9}\\z");
+            Match match = regex.Match(strNumero);
+
+            if (match.Success)
+                return true;
+            else
+                return false;
+        }
+
+        // Método para validar campos ( no estén vacíos )
+        public bool texBoxIsEmpty()
+        {
+            bool emptyOk = false;
+
+            if (!strDni.Equals("") && !strNombre.Equals("") && !strDireccion.Equals("") &&
+                !edad.Equals("") && !tlfn.Equals("") && !cc.Equals(""))
+            {
+                emptyOk = true;
+            }
+
+            return emptyOk;
+        }      
     }
 }

@@ -66,6 +66,12 @@
     <Compile Include="ModificaForm.Designer.cs">
       <DependentUpon>ModificaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MostrarDatosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarDatosForm.Designer.cs">
+      <DependentUpon>MostrarDatosForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CamposRegistro.resx">
@@ -76,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModificaForm.resx">
       <DependentUpon>ModificaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarDatosForm.resx">
+      <DependentUpon>MostrarDatosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,6 +120,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backmodified.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

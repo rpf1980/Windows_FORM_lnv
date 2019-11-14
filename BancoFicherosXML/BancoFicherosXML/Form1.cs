@@ -14,6 +14,7 @@ namespace BancoFicherosXML
     {
         CamposRegistro formAddcliente = new CamposRegistro();
         ModificaForm formModificar = new ModificaForm();
+        MostrarDatosForm mostrarDatosForm = new MostrarDatosForm();
 
         public Form1()
         {
@@ -39,7 +40,8 @@ namespace BancoFicherosXML
         // MOSTRAR DATOS
         private void button4_Click(object sender, EventArgs e)
         {
-            // Leemos el XML y lo mostramos en un GridView
+            // Pasamos a MostrarDatosForm
+            mostrarDatosForm.Show();
         }
     }
 }

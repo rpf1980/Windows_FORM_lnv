@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
+using System.Text.RegularExpressions;
 using System.IO;
 using System.Xml.Linq;
 
@@ -18,6 +19,13 @@ namespace BancoFicherosXML
         int pos = -1;
         Banco banco = new Banco();
         Cliente cliente = new Cliente();
+
+        string strDni = "";
+        string strNombre = "";
+        string strDireccion = "";
+        int edad = 0;
+        int tlfn = 0;
+        int cc = 0;
 
         public ModificaForm()
         {
@@ -62,14 +70,7 @@ namespace BancoFicherosXML
 
         // Btn MODIFICAR
         private void button2_Click(object sender, EventArgs e)
-        {
-            string strDni = "";
-            string strNombre = "";
-            string strDireccion = "";
-            int edad = 0;
-            int tlfn = 0;
-            int cc = 0;
-
+        {            
             FileStream fichero = new FileStream("data.xml", FileMode.Create);
             
             // Guardamos los campos registrados
@@ -80,25 +81,35 @@ namespace BancoFicherosXML
             tlfn = Convert.ToInt32(idTextTlfn.Text);
             cc = Convert.ToInt32(idTextCC.Text);
 
-            // Damos valores a los atributos del objeto cliente
-            cliente.Dni = strDni;
-            cliente.Nombre = strNombre;
-            cliente.Direccion = strDireccion;
-            cliente.Edad = edad;
-            cliente.Tlfn = tlfn;
-            cliente.Cc = cc;
-
-            // Añadimos el cliente a la lista del objeto banco
-            // Si pos no es igual a -1 quiere decir que hay un cliente seleccionado y podríamos modificarlo
-            if(pos != -1)
+            if(texBoxIsEmpty() && DNIvalido(strDni) && ValidarTelefono(tlfn.ToString()))
             {
-                banco.ModificarCliente(cliente, pos);
+                try
+                {
+                    // Damos valores a los atributos del objeto cliente
+                    cliente.Dni = strDni;
+                    cliente.Nombre = strNombre;
+                    cliente.Direccion = strDireccion;
+                    cliente.Edad = edad;
+                    cliente.Tlfn = tlfn;
+                    cliente.Cc = cc;
 
-                // Creamos el formateador XML
-                XmlSerializer format = new XmlSerializer(banco.GetType());
-                format.Serialize(fichero, banco);
-            }         
-            fichero.Close();
+                    // Añadimos el cliente a la lista del objeto banco
+                    // Si pos no es igual a -1 quiere decir que hay un cliente seleccionado y podríamos modificarlo
+                    if (pos != -1)
+                    {
+                        banco.ModificarCliente(cliente, pos);
+
+                        // Creamos el formateador XML
+                        XmlSerializer format = new XmlSerializer(banco.GetType());
+                        format.Serialize(fichero, banco);
+                    }
+                    fichero.Close();
+                }
+                catch(IOException ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }           
         }
 
 
@@ -109,6 +120,7 @@ namespace BancoFicherosXML
 
             if (pos != -1)
             {
+
                 banco.EliminaCliente(pos);
 
                 // Creamos el formateador XML
@@ -118,6 +130,54 @@ namespace BancoFicherosXML
             fichero.Close();
 
             // Poner campos vacíos
+
+            idCampoStrDni.Text = "";
+            idTextNombre.Text = "";
+            idTextDireccion.Text = "";
+            idTextEdad.Text = "";
+            idTextTlfn.Text = "";
+            idTextCC.Text = "";
+            idTextDni.Text = "";
+        }
+
+        // MÉTODOS APARTE
+
+        // Métodos para validar DNI
+        public bool DNIvalido(string dni)
+        {
+            string patron = "[A-HJ-NP-SUVW][0-9]{7}[0-9A-J]|\\d{8}[TRWAGMYFPDXBNJZSQVHLCKE]|[X]\\d{7}[TRWAGMYFPDXBNJZSQVHLCKE]|[X]\\d{8}[TRWAGMYFPDXBNJZSQVHLCKE]|[YZ]\\d{0,7}[TRWAGMYFPDXBNJZSQVHLCKE]";
+            string sRemp = "";
+            bool ret = false;
+            System.Text.RegularExpressions.Regex rgx = new System.Text.RegularExpressions.Regex(patron);
+            sRemp = rgx.Replace(dni.ToString(), "OK");
+            if (sRemp == "OK") ret = true;
+            return ret;
+        }
+
+        // Método para validar TELÉFONO
+        public bool ValidarTelefono(string strNumero)
+        {
+            Regex regex = new Regex("\\A[0-9]{9}\\z");
+            Match match = regex.Match(strNumero);
+
+            if (match.Success)
+                return true;
+            else
+                return false;
+        }
+
+        // Método para que los campos no estén vacíos
+        public bool texBoxIsEmpty()
+        {
+            bool emptyOk = false;
+
+            if (!strDni.Equals("") && !strNombre.Equals("") && !strDireccion.Equals("") &&
+                !edad.Equals("") && !tlfn.Equals("") && !cc.Equals(""))
+            {
+                emptyOk = true;
+            }
+
+            return emptyOk;
         }
     }
 }

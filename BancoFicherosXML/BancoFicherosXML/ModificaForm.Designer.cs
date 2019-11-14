@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificaForm));
             this.label1 = new System.Windows.Forms.Label();
             this.idTextDni = new System.Windows.Forms.TextBox();
             this.idTextNombre = new System.Windows.Forms.TextBox();
@@ -252,6 +253,7 @@
             this.Controls.Add(this.idTextDni);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
