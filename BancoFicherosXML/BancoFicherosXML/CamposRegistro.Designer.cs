@@ -176,6 +176,7 @@
             this.idLimpiarRegistro.TabIndex = 15;
             this.idLimpiarRegistro.Text = "LIMPIAR";
             this.idLimpiarRegistro.UseVisualStyleBackColor = true;
+            this.idLimpiarRegistro.Click += new System.EventHandler(this.idLimpiarRegistro_Click);
             // 
             // CamposRegistro
             // 

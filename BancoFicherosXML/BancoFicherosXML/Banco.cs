@@ -9,25 +9,28 @@ namespace BancoFicherosXML
 {
     [Serializable()]
     [XmlRoot("Banco")]
-    class Banco
+    public class Banco
     {
         //Atributos
         private List<Cliente> listaClientes = new List<Cliente>();
 
         //Constructores
-       
+
         public Banco()
         {
             listaClientes = new List<Cliente>();
         }
 
         //Getter && Setter
-        internal List<Cliente> ListaClientes { get => listaClientes; set => listaClientes = value; }
-        
+        public List<Cliente> ListaClientes { get => listaClientes; set => listaClientes = value; }
+
         //Métodos
         public void AddCliente(Cliente cliente)
         {
-            this.listaClientes.Add(cliente);
+            //**OJO---> Atención con esto:
+            // Serializable tiene que acceder al atributo lista desde un modo público
+            // Ese modo público lo obtenemos desde la propiedad de la clase ( Setter )
+            ListaClientes.Add(cliente);
         }
 
         public Cliente ModificarCliente(string dni)
@@ -37,19 +40,19 @@ namespace BancoFicherosXML
             {
                 string docDni = this.listaClientes[i].Dni;
 
-                if(docDni.Equals(dni))
+                if (docDni.Equals(dni))
                 {
                     cli = this.listaClientes[i];
                 }
             }
             return cli;
         }
-        
+
         public void EliminaCliente(Cliente cliente)
         {
             for (int i = 0; i < this.listaClientes.Count; i++)
             {
-                if(this.listaClientes[i] == cliente)
+                if (this.listaClientes[i] == cliente)
                 {
                     this.listaClientes.RemoveAt(i);
                 }
@@ -57,3 +60,4 @@ namespace BancoFicherosXML
         }
     }
 }
+

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Banco xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ListaClientes>
+    <Cliente>
+      <Dni>33333333a</Dni>
+      <Nombre>FGSDFG</Nombre>
+      <Direccion>FGS</Direccion>
+      <Edad>45</Edad>
+      <Tlfn>444444444</Tlfn>
+      <Cc>233</Cc>
+    </Cliente>
+    <Cliente>
+      <Dni>55555555a</Dni>
+      <Nombre>JULIO</Nombre>
+      <Direccion>DFASD</Direccion>
+      <Edad>44</Edad>
+      <Tlfn>333444555</Tlfn>
+      <Cc>377</Cc>
+    </Cliente>
+  </ListaClientes>
+</Banco>

@@ -21,7 +21,9 @@ namespace BancoFicherosXML
         int tlfn = 0;
         int cc = 0;
 
-        List<Cliente> listaClientes = new List<Cliente>();
+        // Objeto BANCO creado en ámbito global de clase
+        // para que NO se machaquen los datos de los clientes en la lista
+        Banco banco = new Banco();
 
         public CamposRegistro()
         {
@@ -36,9 +38,9 @@ namespace BancoFicherosXML
         // Btn GUARDAR ( aquí va la lógica del creación del xml y registro de datos
         private void idGuardarRegistro_Click(object sender, EventArgs e)
         {
-            FileStream fichero = new FileStream("datos.xml", FileMode.Create);
-            Cliente cliente = new Cliente();
-            Banco banco = new Banco();
+            
+            FileStream fichero = new FileStream("data.xml", FileMode.Create);
+            Cliente cliente = new Cliente();         
 
             // Guardamos los campos registrados
             strDni = idDniRegistro.Text;
@@ -59,8 +61,30 @@ namespace BancoFicherosXML
             // Añadimos el cliente a la lista del objeto banco
             banco.AddCliente(cliente);
 
-            // Creamos el fichero XML
-            
+            // Creamos el formateador XML
+            XmlSerializer format = new XmlSerializer(banco.GetType());
+            format.Serialize(fichero, banco);
+
+            fichero.Close();
+
+        }
+
+        // LIMPIAR campos del form
+        private void idLimpiarRegistro_Click(object sender, EventArgs e)
+        {
+            //strDni = idDniRegistro.Text;
+            //strNombre = idRegistroNombre.Text;
+            //strDireccion = idDireccRegistro.Text;
+            //edad = Convert.ToInt32(idEdadRegistro.Text);
+            //tlfn = Convert.ToInt32(idTlfnRegistro.Text);
+            //cc = Convert.ToInt32(idCCregistro.Text);
+
+            idDniRegistro.Text = "";
+            idRegistroNombre.Text = "";
+            idDireccRegistro.Text = "";
+            idEdadRegistro.Text = "";
+            idTlfnRegistro.Text = "";
+            idCCregistro.Text = "";
         }
     }
 }

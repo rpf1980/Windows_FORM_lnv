@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 
 namespace BancoFicherosXML
 {
-    class Cliente
+    public class Cliente
     {
         //Atributos
         private string dni;
@@ -38,3 +38,4 @@ namespace BancoFicherosXML
         public int Cc { get => cc; set => cc = value; }
     }
 }
+
