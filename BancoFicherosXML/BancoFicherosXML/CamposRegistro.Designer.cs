@@ -202,6 +202,7 @@
             this.Controls.Add(this.idEdadRegistro);
             this.DoubleBuffered = true;
             this.Name = "CamposRegistro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "REGISTRO CLIENTE";
             this.Load += new System.EventHandler(this.CamposRegistro_Load);
             this.ResumeLayout(false);

@@ -31,8 +31,10 @@ namespace BancoFicherosXML
         private void button2_Click(object sender, EventArgs e)
         {
             // Pasamos a la vista CamposRegistro
+            formAddcliente.Show();
 
             // Cargamos datos del cliente en los campos
+
 
             // Guardamos los cambios 
         }

@@ -63,6 +63,16 @@ namespace BancoFicherosXML.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backmodified {
+            get {
+                object obj = ResourceManager.GetObject("backmodified", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cambiar {
             get {
                 object obj = ResourceManager.GetObject("cambiar", resourceCulture);
