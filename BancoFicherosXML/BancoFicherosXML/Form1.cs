@@ -13,6 +13,7 @@ namespace BancoFicherosXML
     public partial class Form1 : Form
     {
         CamposRegistro formAddcliente = new CamposRegistro();
+        ModificaForm formModificar = new ModificaForm();
 
         public Form1()
         {
@@ -31,7 +32,7 @@ namespace BancoFicherosXML
         private void button2_Click(object sender, EventArgs e)
         {
             // Pasamos a la vista CamposRegistro
-            formAddcliente.Show();
+            formModificar.Show();
 
             // Cargamos datos del cliente en los campos
 

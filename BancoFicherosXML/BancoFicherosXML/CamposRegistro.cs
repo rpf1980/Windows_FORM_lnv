@@ -30,6 +30,11 @@ namespace BancoFicherosXML
             InitializeComponent();
         }
 
+        public CamposRegistro(Banco banco)
+        {
+            this.banco = banco;
+        }
+
         private void CamposRegistro_Load(object sender, EventArgs e)
         {
 
@@ -37,8 +42,7 @@ namespace BancoFicherosXML
 
         // Btn GUARDAR ( aquí va la lógica del creación del xml y registro de datos
         private void idGuardarRegistro_Click(object sender, EventArgs e)
-        {
-            
+        {          
             FileStream fichero = new FileStream("data.xml", FileMode.Create);
             Cliente cliente = new Cliente();         
 
@@ -66,19 +70,11 @@ namespace BancoFicherosXML
             format.Serialize(fichero, banco);
 
             fichero.Close();
-
         }
 
         // LIMPIAR campos del form
         private void idLimpiarRegistro_Click(object sender, EventArgs e)
-        {
-            //strDni = idDniRegistro.Text;
-            //strNombre = idRegistroNombre.Text;
-            //strDireccion = idDireccRegistro.Text;
-            //edad = Convert.ToInt32(idEdadRegistro.Text);
-            //tlfn = Convert.ToInt32(idTlfnRegistro.Text);
-            //cc = Convert.ToInt32(idCCregistro.Text);
-
+        {           
             idDniRegistro.Text = "";
             idRegistroNombre.Text = "";
             idDireccRegistro.Text = "";
