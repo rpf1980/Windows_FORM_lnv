@@ -32,12 +32,14 @@ namespace BancoFicherosXML
         private void button2_Click(object sender, EventArgs e)
         {
             // Pasamos a la vista CamposRegistro
-            formModificar.Show();
+            formModificar.Show();          
+        }
 
-            // Cargamos datos del cliente en los campos
 
-
-            // Guardamos los cambios 
+        // MOSTRAR DATOS
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // Leemos el XML y lo mostramos en un GridView
         }
     }
 }

@@ -33,30 +33,14 @@ namespace BancoFicherosXML
             ListaClientes.Add(cliente);
         }
 
-        public Cliente ModificarCliente(string dni)
+        public void ModificarCliente(Cliente cliente, int pos)
         {
-            Cliente cli = null;
-            for (int i = 0; i < this.listaClientes.Count; i++)
-            {
-                string docDni = this.listaClientes[i].Dni;
-
-                if (docDni.Equals(dni))
-                {
-                    cli = this.listaClientes[i];
-                }
-            }
-            return cli;
+            this.ListaClientes[pos] = cliente;
         }
 
-        public void EliminaCliente(Cliente cliente)
+        public void EliminaCliente(int pos)
         {
-            for (int i = 0; i < this.listaClientes.Count; i++)
-            {
-                if (this.listaClientes[i] == cliente)
-                {
-                    this.listaClientes.RemoveAt(i);
-                }
-            }
+            this.ListaClientes.RemoveAt(pos);
         }
     }
 }

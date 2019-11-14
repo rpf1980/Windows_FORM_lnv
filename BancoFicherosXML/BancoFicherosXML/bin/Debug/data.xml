@@ -2,20 +2,12 @@
 <Banco xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ListaClientes>
     <Cliente>
-      <Dni>fasdfasd</Dni>
-      <Nombre>asdfasd</Nombre>
-      <Direccion>asdfasdfas</Direccion>
-      <Edad>23</Edad>
-      <Tlfn>23323</Tlfn>
-      <Cc>233</Cc>
-    </Cliente>
-    <Cliente>
-      <Dni>rerer2343</Dni>
-      <Nombre>Manolo</Nombre>
-      <Direccion>plaza</Direccion>
+      <Dni>14141414D</Dni>
+      <Nombre>DAVID</Nombre>
+      <Direccion>PLAZA NUEVA</Direccion>
       <Edad>34</Edad>
-      <Tlfn>44444</Tlfn>
-      <Cc>444</Cc>
+      <Tlfn>333444555</Tlfn>
+      <Cc>123</Cc>
     </Cliente>
   </ListaClientes>
 </Banco>
