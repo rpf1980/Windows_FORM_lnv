@@ -20,3 +20,5 @@ D:\ESCRITORIO\GitHub_lenovo\WindowsVisual_lnv\BancoFicherosXML\BancoFicherosXML\
 D:\ESCRITORIO\GitHub_lenovo\WindowsVisual_lnv\BancoFicherosXML\BancoFicherosXML\obj\Debug\BancoFicherosXML.exe
 D:\ESCRITORIO\GitHub_lenovo\WindowsVisual_lnv\BancoFicherosXML\BancoFicherosXML\obj\Debug\BancoFicherosXML.pdb
 D:\ESCRITORIO\GitHub_lenovo\WindowsVisual_lnv\BancoFicherosXML\BancoFicherosXML\obj\Debug\BancoFicherosXML.MostrarDatosForm.resources
+C:\Users\RPF\Documents\GitHub\Windows_FORM_lnv\BancoFicherosXML\BancoFicherosXML\obj\Debug\BancoFicherosXML.ModificaForm.resources
+C:\Users\RPF\Documents\GitHub\Windows_FORM_lnv\BancoFicherosXML\BancoFicherosXML\obj\Debug\BancoFicherosXML.MostrarDatosForm.resources

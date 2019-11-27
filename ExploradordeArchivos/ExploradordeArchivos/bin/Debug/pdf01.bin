@@ -1,0 +1,81 @@
+// Compoentes necesarios
+   
+   1. Menus >> toolStripContainer
+   2. Dentro del anterior, en la parte superior >> MenuStrip ( Archivos, Incio... opciones)
+   3. En la parte central de toolStripContainer >> SplitContainer ( formato dividido en 2 partes )
+   4. SplitContainer >> TreeView ( lo ponemos en la parte izquierda de las 2 que se dividen, y lo acoplamos a todo el espacio )
+   5. Propiedades de TreeView:
+   		- AccesibleRole ( Default )
+   		- AllowDrop ( permite o no arrastrar cosas ahí )
+   		- BorderSyle ( los bordes )
+   		- CheckBoxes ( si queremos que en el nodo del árbol, parte izquierda, a la izquierda aparecan checkbox )
+   		- Dock en Fill, para que se acople al contenedor primario
+   		- DrawMode ( modo por defecto )
+   		- FullRowSelect ( false )
+   		- HideSelection ( true )
+   		- HotTracking ( )
+   		- ImageList ( podemos asociar imágenes al nodo, control que nos permite almacenar una colección de imágenes )
+   		  Llenaremos el ImageList de todas aquellas imágenes que compondrán nuestra aplicación
+   		  - Una vez tenga las imágenes, las podemos usar para el TreeView ( apartado ImageIndex, donde elegimos el índice de la imagen a mostrar ). También podríamos identificar las imágnes con una clave ( ImageKey )
+   		- Indent ( indentación )
+   		- LabelEdit ( editar etiquetas de los nodos )
+   		- LineColor ( color de la línea que une los diferentes nodos )
+   		- Nodes ( podemos definir los nodos, si la estructura del TreeView es estática o fija podemos definir los nodos de esta forma )
+   			- En nuestro caso no sería así, nosotros rellenaríamos los nodos de forma dinámica
+   		- PathSeparator ( en nuestro caso sería \ )
+   		- Scrollable
+   		- ShowPlusMinus ( )
+   		- StateImageList ( lista de imágenes con imágenes diferentes, por si queremos usarlas )
+   		- Evento NodeMouseClick ( cuando pulsamos sobre un nodo del árbol )
+
+   	6. En la PARTE DERECHA, mostraremos contenido de las carpetas usaremos ListView
+   	   - ListView:
+   	   		- Activation ( qué acción para interactuar con elemento del listview )
+   	   		- Aligment ( como irán distribuidos los elementos )
+   	   		- AllowColumnRecorder  ( permite modificar la disposición de las columnas --> True )
+   	   		- Allow Drop
+   	   		- AutoArrange
+   	   		- CheckBox ( que cada elemento vaya acompañado de un checkbox )
+   	   		- Columns ( define las cabeceras de las diferentes columnas )
+   	   		- FullRowSelect ( si True... )
+   	   		- GridLines ( que adopte aspecto como de rejilla --> True )
+   	   		- Groups ( para agrupar elementos )
+   	   		- HeaderStyle ( None --> nada, --> que sea clicable, --> que no sea clicable)
+   	   		- HideSelection ( resalte de elemento seleccionado )
+   	   		- HoverSelection ( solo con posicionar un ratón sobre el elemento se selecciona )
+   	   		- Items ( elementos que componen el listview )
+   	   		- LabelEdit ( si permitimos que se editen las etiquetas )
+   	   		- LabelWrap ( si permitimos salto de línea )
+   	   		- LargeImageList ( lista de imágenes para asociarla a nuestros elementos --> Iconos grandes)
+   	   		- SmallImageList ( lista de imágenes para asociarla a nuestros elementos --> Iconos pequeños )
+   	   		- MultiSelect ( permite seleccionar varios elementos )
+   	   		- Sorting ( si ... )
+   	   		- StateImageList ( lista de imágenes un poco más personalizadas )
+   	   		- View ( establecemos que vista se usar por defecto )
+
+   	7. Como vamos a dar funcionalida a la aplicación:
+   		- Definimos dos funciones que usaremos en los eventos de mi control:
+   			PARTE QUE RELLENA EL TreeView
+   			- 1. Función que llamamos en el constructor del formulario
+   				- Defino un objeto TreeNodes rootNode; ( árbol de nodos )
+   				- Defino un objeto DierctoryInfo ( directorio que será la raíz de mi árbol de nodos )
+   				- Si existe el Directorio .... ( info.Exists) --> El TreeNodes se crea --> rootNode = new TreeNodes(info.Name);
+   					(Aquí se puede elegir qué tipo de constructor usar )
+   				- rootNode.Tag = info; ( Propiedad que contendrá la info del directorio )
+   				- Hacemos llamada a otra función definida posteriormente GetDirectories(info.GetDirectories(), rootNodes)
+   					( Irá enganchando subdirectorios al nodo )
+   					( Una vez termine de enganchar todo, debemos añadir los nodos al TreeView --> treeView1.Nodes.Add(rootNode))
+
+   			PARTE QUE RELLENA LA LISTA
+   				1. TreeNode newSelected = e.Node;
+   				   listView.Items.Clear();
+
+   				   //Recuperamos info
+   				   DirectoryInfo nodeDirInfo = (DirectoryInfo) newSelected.Tag;
+
+   				   //Array de Items
+   				   ListViewItem.ListViewSubItem[] subItems;
+   				   ListViewItem item = null;
+
+   				   //Recorremos el DirectoryInfo
+ 	   
