@@ -60,6 +60,7 @@ namespace BancoFicherosXML
             {
                 try
                 {
+
                     // Damos valores a los atributos del objeto cliente
                     cliente.Dni = strDni;
                     cliente.Nombre = strNombre;
@@ -67,27 +68,50 @@ namespace BancoFicherosXML
                     cliente.Edad = edad;
                     cliente.Tlfn = tlfn;
                     cliente.Cc = cc;
+                 
+                    //Comprobamos que el fichero existe
+                    if (!File.Exists(fichero.Name))
+                    {
+                        // Añadimos el cliente a la lista del objeto banco
+                        banco.AddCliente(cliente);
 
-                    // Añadimos el cliente a la lista del objeto banco
-                    banco.AddCliente(cliente);
+                        // Creamos el formateador XML
+                        XmlSerializer format = new XmlSerializer(banco.GetType());
+                        format.Serialize(fichero, banco);
 
-                    // Creamos el formateador XML
-                    XmlSerializer format = new XmlSerializer(banco.GetType());
-                    format.Serialize(fichero, banco);
 
-                    fichero.Close();
+                        fichero.Close();
+                    }
+                    else
+                    {
+                        //Si el fichero ya existe....
+
+                       
+
+
+
+                    
+                    }
 
                     MessageBox.Show("¡ Registro Ok !");
                 }
                 catch(IOException ex)
                 {
-                    Console.WriteLine("Error: " + ex.Message);
-                }               
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
+                    //Se ejecuta ocurra o no la excepción
+                    if(fichero != null)
+                    {
+                        fichero.Close();
+                    }
+                }
             }
             else
             {
                 MessageBox.Show("Revise que los campos no estén vacíos.\nCompruebe el correo, la constraseña y que el número" +
-                    "de teléfono sea correcto");
+                    "de teléfono sea correcto.\nCompruebe IBAN");
             }
         }
 
@@ -146,6 +170,23 @@ namespace BancoFicherosXML
         public bool ValidaIban()
         {
             return Regex.IsMatch(cc, regexIban);
+        }
+
+        //Función que lee de un fichero XML y devuelve un objeto banco que contendrá una lista de objetos cliente
+        public Banco LeeFicheroClientes(string fichero)
+        {
+            Banco banco = null;
+
+            //Leemos el fichero y guardamos los objetos del xml en una lista de objetos
+            FileStream ficheroLectura = new FileStream(fichero, FileMode.Open);
+
+            //Creamos el formateador XML
+            XmlSerializer format = new XmlSerializer(banco.GetType());
+            banco = (Banco)format.Deserialize(ficheroLectura);
+
+            ficheroLectura.Close();
+
+            return banco;
         }
     }
 }

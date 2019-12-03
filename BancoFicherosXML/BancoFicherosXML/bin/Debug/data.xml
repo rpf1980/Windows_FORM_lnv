@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Banco xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ListaClientes>
+    <Cliente>
+      <Dni>23232323W</Dni>
+      <Nombre>MANUELA</Nombre>
+      <Direccion>AVD. SALUD GORRA</Direccion>
+      <Edad>46</Edad>
+      <Tlfn>222111222</Tlfn>
+      <Cc>DZ4000400174401001050486</Cc>
+    </Cliente>
+  </ListaClientes>
+</Banco>
