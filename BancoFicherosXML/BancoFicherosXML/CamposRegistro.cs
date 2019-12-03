@@ -20,7 +20,8 @@ namespace BancoFicherosXML
         string strDireccion = "";
         int edad = 0;
         int tlfn = 0;
-        int cc = 0;
+        const string regexIban = @"[a-zA-Z]{2}[0-9]{2}[a-zA-Z0-9]{4}[0-9]{7}([a-zA-Z0-9]?){0,16}";
+        string cc = "";
 
         // Objeto BANCO creado en ámbito global de clase
         // para que NO se machaquen los datos de los clientes en la lista
@@ -53,9 +54,9 @@ namespace BancoFicherosXML
             strDireccion = idDireccRegistro.Text;
             edad = Convert.ToInt32(idEdadRegistro.Text);
             tlfn = Convert.ToInt32(idTlfnRegistro.Text);
-            cc = Convert.ToInt32(idCCregistro.Text);
+            cc = idCCregistro.Text;
 
-            if(texBoxIsEmpty() && DNIvalido(strDni) && ValidarTelefono(tlfn.ToString()))
+            if(texBoxIsEmpty() && DNIvalido(strDni) && ValidarTelefono(tlfn.ToString()) && ValidaIban())
             {
                 try
                 {
@@ -75,6 +76,8 @@ namespace BancoFicherosXML
                     format.Serialize(fichero, banco);
 
                     fichero.Close();
+
+                    MessageBox.Show("¡ Registro Ok !");
                 }
                 catch(IOException ex)
                 {
@@ -137,6 +140,12 @@ namespace BancoFicherosXML
             }
 
             return emptyOk;
-        }      
+        }   
+        
+        //Método validar IBAN
+        public bool ValidaIban()
+        {
+            return Regex.IsMatch(cc, regexIban);
+        }
     }
 }

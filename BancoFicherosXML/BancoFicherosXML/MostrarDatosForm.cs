@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace BancoFicherosXML
 {
@@ -17,7 +18,12 @@ namespace BancoFicherosXML
         public MostrarDatosForm()
         {
             InitializeComponent();
-            dataSet.ReadXml(filePath);
+
+            if(File.Exists(filePath))
+            {
+                dataSet.ReadXml(filePath);
+            }
+           
         }
 
         private void MostrarDatosForm_Load(object sender, EventArgs e)

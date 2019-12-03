@@ -15,12 +15,12 @@ namespace BancoFicherosXML
         private string direccion;
         private int edad;
         private int tlfn;
-        private int cc;
+        private string cc;
 
         //Constructores
         public Cliente() { }
 
-        public Cliente(string dni, string nombre, string direccion, int edad, int tlfn, int cc)
+        public Cliente(string dni, string nombre, string direccion, int edad, int tlfn, string cc)
         {
             this.dni = dni;
             this.nombre = nombre;
@@ -35,7 +35,7 @@ namespace BancoFicherosXML
         public string Direccion { get => direccion; set => direccion = value; }
         public int Edad { get => edad; set => edad = value; }
         public int Tlfn { get => tlfn; set => tlfn = value; }
-        public int Cc { get => cc; set => cc = value; }
+        public string Cc { get => cc; set => cc = value; }
     }
 }
 

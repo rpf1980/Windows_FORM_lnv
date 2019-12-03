@@ -25,7 +25,7 @@ namespace BancoFicherosXML
         string strDireccion = "";
         int edad = 0;
         int tlfn = 0;
-        int cc = 0;
+        string cc = "";
 
         public ModificaForm()
         {
@@ -64,7 +64,7 @@ namespace BancoFicherosXML
             idTextDireccion.Text = cliente.Direccion;
             idTextEdad.Text = Convert.ToString(cliente.Edad);
             idTextTlfn.Text = Convert.ToString(cliente.Tlfn);
-            idTextCC.Text = Convert.ToString(cliente.Cc);
+            idTextCC.Text = cliente.Cc;
         }
 
 
@@ -79,7 +79,7 @@ namespace BancoFicherosXML
             strDireccion = idTextDireccion.Text;
             edad = Convert.ToInt32(idTextEdad.Text);
             tlfn = Convert.ToInt32(idTextTlfn.Text);
-            cc = Convert.ToInt32(idTextCC.Text);
+            cc = idTextCC.Text;
 
             if(texBoxIsEmpty() && DNIvalido(strDni) && ValidarTelefono(tlfn.ToString()))
             {
