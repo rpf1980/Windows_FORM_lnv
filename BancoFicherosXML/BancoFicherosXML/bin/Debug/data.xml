@@ -2,11 +2,27 @@
 <Banco xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ListaClientes>
     <Cliente>
-      <Dni>23232323W</Dni>
-      <Nombre>MANUELA</Nombre>
-      <Direccion>AVD. SALUD GORRA</Direccion>
-      <Edad>46</Edad>
+      <Dni>12121212A</Dni>
+      <Nombre>GDFGD</Nombre>
+      <Direccion>GDFGSDF</Direccion>
+      <Edad>56</Edad>
+      <Tlfn>333444555</Tlfn>
+      <Cc>DZ4000400174401001050486</Cc>
+    </Cliente>
+    <Cliente>
+      <Dni>12121212A</Dni>
+      <Nombre>RTERT</Nombre>
+      <Direccion>RTERT</Direccion>
+      <Edad>45</Edad>
       <Tlfn>222111222</Tlfn>
+      <Cc>DZ4000400174401001050486</Cc>
+    </Cliente>
+    <Cliente>
+      <Dni>12121212R</Dni>
+      <Nombre>FASD</Nombre>
+      <Direccion>DFA</Direccion>
+      <Edad>34</Edad>
+      <Tlfn>222333444</Tlfn>
       <Cc>DZ4000400174401001050486</Cc>
     </Cliente>
   </ListaClientes>

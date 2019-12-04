@@ -44,9 +44,11 @@ namespace BancoFicherosXML
 
         // Btn GUARDAR ( aquí va la lógica del creación del xml y registro de datos
         private void idGuardarRegistro_Click(object sender, EventArgs e)
-        {          
-            FileStream fichero = new FileStream("data.xml", FileMode.Create);
-            Cliente cliente = new Cliente();         
+        {
+            //FileStream fichero = new FileStream("data.xml", FileMode.OpenOrCreate);
+            //Cliente cliente = new Cliente(); 
+            FileStream fichero = null;
+            Cliente cliente = null;
 
             // Guardamos los campos registrados
             strDni = idDniRegistro.Text;
@@ -59,8 +61,8 @@ namespace BancoFicherosXML
             if(texBoxIsEmpty() && DNIvalido(strDni) && ValidarTelefono(tlfn.ToString()) && ValidaIban())
             {
                 try
-                {
-
+                {                   
+                    cliente = new Cliente();
                     // Damos valores a los atributos del objeto cliente
                     cliente.Dni = strDni;
                     cliente.Nombre = strNombre;
@@ -70,27 +72,37 @@ namespace BancoFicherosXML
                     cliente.Cc = cc;
                  
                     //Comprobamos que el fichero existe
-                    if (!File.Exists(fichero.Name))
+                    if (!File.Exists("data.xml"))
                     {
                         // Añadimos el cliente a la lista del objeto banco
+                        fichero = new FileStream("data.xml", FileMode.Create);
                         banco.AddCliente(cliente);
 
                         // Creamos el formateador XML
                         XmlSerializer format = new XmlSerializer(banco.GetType());
                         format.Serialize(fichero, banco);
-
-
                         fichero.Close();
                     }
                     else
                     {
                         //Si el fichero ya existe....
+                        //...leemos contenido del XML y guardamos los objetos clientes en un objeto banco (lista de clientes)
+                        //Leemos el fichero y guardamos los objetos del xml en una lista de objetos
+                        fichero = new FileStream("data.xml", FileMode.Open);
 
-                       
+                        //Creamos el formateador XML
+                        XmlSerializer format = new XmlSerializer(banco.GetType());
+                        banco = (Banco)format.Deserialize(fichero);
 
+                        fichero.Close();
 
+                        //Añadimos nuevo objeto cliente a nuestro fichero Deserializado ( banco )
+                        fichero = new FileStream("data.xml", FileMode.Create);
+                        banco.AddCliente(cliente);
+                        XmlSerializer format2 = new XmlSerializer(banco.GetType());
+                        format2.Serialize(fichero, banco);
+                        fichero.Close();
 
-                    
                     }
 
                     MessageBox.Show("¡ Registro Ok !");
@@ -173,16 +185,14 @@ namespace BancoFicherosXML
         }
 
         //Función que lee de un fichero XML y devuelve un objeto banco que contendrá una lista de objetos cliente
-        public Banco LeeFicheroClientes(string fichero)
-        {
-            Banco banco = null;
-
+        public Banco LeeFicheroClientes(Banco banco)
+        {          
             //Leemos el fichero y guardamos los objetos del xml en una lista de objetos
-            FileStream ficheroLectura = new FileStream(fichero, FileMode.Open);
+            FileStream ficheroLectura = new FileStream("data.xml", FileMode.Open);
 
             //Creamos el formateador XML
             XmlSerializer format = new XmlSerializer(banco.GetType());
-            banco = (Banco)format.Deserialize(ficheroLectura);
+            banco = (Banco)format.Deserialize(ficheroLectura);  
 
             ficheroLectura.Close();
 
