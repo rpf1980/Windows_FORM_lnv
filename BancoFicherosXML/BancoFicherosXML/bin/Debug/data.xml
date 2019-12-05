@@ -3,27 +3,27 @@
   <ListaClientes>
     <Cliente>
       <Dni>12121212A</Dni>
-      <Nombre>GDFGD</Nombre>
-      <Direccion>GDFGSDF</Direccion>
-      <Edad>56</Edad>
-      <Tlfn>333444555</Tlfn>
-      <Cc>DZ4000400174401001050486</Cc>
+      <Nombre>MANUEL LORETO MANETO</Nombre>
+      <Direccion>AVD. TARRAGONA Nº12</Direccion>
+      <Edad>32</Edad>
+      <Tlfn>111222111</Tlfn>
+      <Cc>AD1200012030200359100100</Cc>
     </Cliente>
     <Cliente>
-      <Dni>12121212A</Dni>
-      <Nombre>RTERT</Nombre>
-      <Direccion>RTERT</Direccion>
-      <Edad>45</Edad>
-      <Tlfn>222111222</Tlfn>
-      <Cc>DZ4000400174401001050486</Cc>
+      <Dni>21212121B</Dni>
+      <Nombre>MIGUEL BLANCO NUCLEAR</Nombre>
+      <Direccion>C/ ROSA MONICA S/N</Direccion>
+      <Edad>27</Edad>
+      <Tlfn>333222111</Tlfn>
+      <Cc>AD1200012030200359100100</Cc>
     </Cliente>
     <Cliente>
-      <Dni>12121212R</Dni>
-      <Nombre>FASD</Nombre>
-      <Direccion>DFA</Direccion>
-      <Edad>34</Edad>
-      <Tlfn>222333444</Tlfn>
-      <Cc>DZ4000400174401001050486</Cc>
+      <Dni>13131313E</Dni>
+      <Nombre>LUIS GÓMEZ TORRES</Nombre>
+      <Direccion>PLAZA RODEO CHICO</Direccion>
+      <Edad>35</Edad>
+      <Tlfn>444333222</Tlfn>
+      <Cc>AD1200012030200359100100</Cc>
     </Cliente>
   </ListaClientes>
 </Banco>
