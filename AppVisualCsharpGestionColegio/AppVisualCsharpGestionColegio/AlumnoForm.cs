@@ -103,6 +103,8 @@ namespace AppVisualCsharpGestionColegio
                         fichero = File.AppendText(nombreFichero);
                         fichero.WriteLine($"{dni}*{nombre}*{direccion}*{telefono}*{date}");
                         fichero.Close();
+
+                        MessageBox.Show("Registro con éxito !!!");
                     }
                     else
                     {
@@ -110,11 +112,13 @@ namespace AppVisualCsharpGestionColegio
                         fichero = File.CreateText(nombreFichero);
                         fichero.WriteLine($"{dni}*{nombre}*{direccion}*{telefono}*{date}");
                         fichero.Close();
+
+                        MessageBox.Show("Registro con éxito !!!");
                     }
                 }
                 catch(IOException ex)
                 {
-                    Console.WriteLine("Se ha producido un error:" + ex.Message);
+                    MessageBox.Show("Se ha producido un error:" + ex.Message);
                 }                       
             }          
         }

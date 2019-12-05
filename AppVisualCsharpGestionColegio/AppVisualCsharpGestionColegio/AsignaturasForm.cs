@@ -55,6 +55,8 @@ namespace AppVisualCsharpGestionColegio
                         fichero = File.AppendText(nombreFichero);
                         fichero.WriteLine($"{strID}*{strNombre}*{strDepartamento}*{strHoras}");
                         fichero.Close();
+
+                        MessageBox.Show("Asignatura registrada !!!");
                     }
                     else
                     {
@@ -62,6 +64,8 @@ namespace AppVisualCsharpGestionColegio
                         fichero = File.CreateText(nombreFichero);
                         fichero.WriteLine($"{strID}*{strNombre}*{strDepartamento}*{strHoras}");
                         fichero.Close();
+
+                        MessageBox.Show("Asignatura registrada !!!");
                     }
                 }
                 else
@@ -71,7 +75,7 @@ namespace AppVisualCsharpGestionColegio
             }
             catch(IOException ex)
             {
-                Console.WriteLine($"Se ha producido un error: {ex.Message}");
+                MessageBox.Show($"Se ha producido un error: {ex.Message}");
             }          
         }
 

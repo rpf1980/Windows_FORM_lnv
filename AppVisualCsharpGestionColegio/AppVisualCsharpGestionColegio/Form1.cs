@@ -13,10 +13,10 @@ namespace AppVisualCsharpGestionColegio
     public partial class MenuInicioForm : Form
     {
         // Intancias con las clases Forms de la app
-        AlumnoForm alumnoForm = new AlumnoForm();
-        ProfesorForm profesorForm = new ProfesorForm();
-        AsignaturasForm asignaturasForm = new AsignaturasForm();
-        ConsultasForm consultasForm = new ConsultasForm();
+        AlumnoForm alumnoForm = null;
+        ProfesorForm profesorForm = null;
+        AsignaturasForm asignaturasForm = null;
+        ConsultasForm consultasForm = null;
 
         public MenuInicioForm()
         {
@@ -31,18 +31,21 @@ namespace AppVisualCsharpGestionColegio
         //Btn ALUMNO
         private void button1_Click(object sender, EventArgs e)
         {
+            alumnoForm = new AlumnoForm();
             alumnoForm.Show();
         }
 
         //Btn PROFESOR
         private void button2_Click(object sender, EventArgs e)
         {
+            profesorForm = new ProfesorForm();
             profesorForm.Show();
         }
 
         // Btn ASIGNATURAS
         private void button3_Click(object sender, EventArgs e)
         {
+            asignaturasForm = new AsignaturasForm();
             asignaturasForm.Show();
         }
 
@@ -54,6 +57,7 @@ namespace AppVisualCsharpGestionColegio
         // Btn CONSULTAS
         private void button5_Click(object sender, EventArgs e)
         {
+            consultasForm = new ConsultasForm();
             consultasForm.Show();          
         }
     }
