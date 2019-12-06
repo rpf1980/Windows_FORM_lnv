@@ -25,5 +25,13 @@
       <Tlfn>444333222</Tlfn>
       <Cc>AD1200012030200359100100</Cc>
     </Cliente>
+    <Cliente>
+      <Dni>12121212F</Dni>
+      <Nombre>RAMÓN BUENO</Nombre>
+      <Direccion>C/ SOLETE Nº 12</Direccion>
+      <Edad>34</Edad>
+      <Tlfn>321321321</Tlfn>
+      <Cc>ES3912341234250123456789</Cc>
+    </Cliente>
   </ListaClientes>
 </Banco>
