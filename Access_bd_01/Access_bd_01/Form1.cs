@@ -130,52 +130,5 @@ namespace Access_bd_01
             idBtnGuardarProf.Enabled = false;
             MessageBox.Show("Origen de datos actualizados");
         }
-
-        //==================  BLOQUE CÓDIGO ASIGNATURA  =====================
-
-        //Btn AÑADIR ASIGNATURA
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //Para agregar nuevo registro
-            aSIGNATURABindingSource.AddNew();
-
-            panelAsignatura.Enabled = true;     //Habilitamos panel de campos
-            idBtnGuardarAsig.Enabled = true;    //Habilitamos btn GUARDAR
-
-            //Situamos el foco en en campo dni
-            idNombreAsig.Focus();
-        }
-
-        //Btn GUARDAR ASIGNATURA
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.aSIGNATURABindingSource.EndEdit();
-            this.aSIGNATURATableAdapter.Update(bdatosDataSet.ASIGNATURA);
-            this.aSIGNATURADataGridView.Refresh();
-
-            panelAsignatura.Enabled = false;
-            idBtnGuardarAsig.Enabled = false;
-            MessageBox.Show("Origen de datos actualizados");
-        }
-
-        //Btn MODIFICAR ASIGNATURA
-        private void button4_Click(object sender, EventArgs e)
-        {
-            panelAsignatura.Enabled = true;
-            idBtnGuardarAsig.Enabled = true;
-            idNombreAsig.Focus();
-        }
-
-        //Btn ELIMINAR ASIGNATURA
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //Btn SALIR ASIGNATURA  
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }
