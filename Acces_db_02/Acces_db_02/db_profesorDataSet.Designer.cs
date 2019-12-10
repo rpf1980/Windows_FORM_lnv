@@ -10,6 +10,8 @@
 
 #pragma warning disable 1591
 
+using System;
+
 namespace Acces_db_02 {
     
     
@@ -2124,6 +2126,11 @@ namespace Acces_db_02.db_profesorDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string NOMBRE, string DIRECCION, global::System.Nullable<int> TELEFONO, global::System.Nullable<global::System.DateTime> F_NACIM, string Original_DNI, string Original_NOMBRE, string Original_DIRECCION, global::System.Nullable<int> Original_TELEFONO, global::System.Nullable<global::System.DateTime> Original_F_NACIM) {
             return this.Update(Original_DNI, NOMBRE, DIRECCION, TELEFONO, F_NACIM, Original_DNI, Original_NOMBRE, Original_DIRECCION, Original_TELEFONO, Original_F_NACIM);
+        }
+
+        internal void Delete(int v)
+        {
+            throw new NotImplementedException();
         }
     }
     
