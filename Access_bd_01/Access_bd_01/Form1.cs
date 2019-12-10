@@ -131,6 +131,17 @@ namespace Access_bd_01
             MessageBox.Show("Origen de datos actualizados");
         }
 
+        //Btn ELIMINAR PROFESOR
+        private void idBtnEliminarProf_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("¿Desea borrar el registro?","Borra registro", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.pROFESORESTableAdapter.Delete(Convert.ToInt32(dniTextBox.Text));
+                this.bdatosDataSet.PROFESORES.Rows.RemoveAt(this.pROFESORESDataGridView.CurrentCell.RowIndex);
+                this.pROFESORESTableAdapter.Update(bdatosDataSet.PROFESORES);
+            }
+        }
+
         //==================  BLOQUE CÓDIGO ASIGNATURA  =====================
 
         //Btn SALIR ASIG

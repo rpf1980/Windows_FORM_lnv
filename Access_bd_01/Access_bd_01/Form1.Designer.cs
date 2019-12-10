@@ -528,6 +528,7 @@
             this.idBtnEliminarProf.TabIndex = 20;
             this.idBtnEliminarProf.Text = "ELIMINAR";
             this.idBtnEliminarProf.UseVisualStyleBackColor = true;
+            this.idBtnEliminarProf.Click += new System.EventHandler(this.idBtnEliminarProf_Click);
             // 
             // button3
             // 
