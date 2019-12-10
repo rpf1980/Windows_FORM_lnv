@@ -27,6 +27,8 @@ namespace Access_bd_01
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'bdatosDataSet.ASIGNATURA' Puede moverla o quitarla según sea necesario.
+            this.aSIGNATURATableAdapter.Fill(this.bdatosDataSet.ASIGNATURA);
             // TODO: esta línea de código carga datos en la tabla 'bdatosDataSet.PROFESORES' Puede moverla o quitarla según sea necesario.
             this.pROFESORESTableAdapter.Fill(this.bdatosDataSet.PROFESORES);
             // TODO: esta línea de código carga datos en la tabla 'bdatosDataSet.ALUMNOS' Puede moverla o quitarla según sea necesario.
@@ -102,7 +104,7 @@ namespace Access_bd_01
             //Para agregar nuevo registro
             pROFESORESBindingSource.AddNew();
 
-            panelProf.Enabled = true;     //Habilitamos panel de campos
+            panelProf.Enabled = true;           //Habilitamos panel de campos
             idBtnGuardarProf.Enabled = true;    //Habilitamos btn GUARDAR
 
             //Situamos el foco en en campo dni
