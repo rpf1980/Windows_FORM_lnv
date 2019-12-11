@@ -205,7 +205,7 @@ WHERE        (DEPARTAMENTO = LENGUA)</CommandText>
   <xs:element name="dataAcces_09DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dataAcces_09DataSet" msprop:Generator_UserDSName="dataAcces_09DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ALUMNOS" msprop:Generator_TableClassName="ALUMNOSDataTable" msprop:Generator_TableVarName="tableALUMNOS" msprop:Generator_TablePropName="ALUMNOS" msprop:Generator_RowDeletingName="ALUMNOSRowDeleting" msprop:Generator_RowChangingName="ALUMNOSRowChanging" msprop:Generator_RowEvHandlerName="ALUMNOSRowChangeEventHandler" msprop:Generator_RowDeletedName="ALUMNOSRowDeleted" msprop:Generator_UserTableName="ALUMNOS" msprop:Generator_RowChangedName="ALUMNOSRowChanged" msprop:Generator_RowEvArgName="ALUMNOSRowChangeEvent" msprop:Generator_RowClassName="ALUMNOSRow">
+        <xs:element name="ALUMNOS" msprop:Generator_TableClassName="ALUMNOSDataTable" msprop:Generator_TableVarName="tableALUMNOS" msprop:Generator_RowChangedName="ALUMNOSRowChanged" msprop:Generator_TablePropName="ALUMNOS" msprop:Generator_RowDeletingName="ALUMNOSRowDeleting" msprop:Generator_RowChangingName="ALUMNOSRowChanging" msprop:Generator_RowEvHandlerName="ALUMNOSRowChangeEventHandler" msprop:Generator_RowDeletedName="ALUMNOSRowDeleted" msprop:Generator_RowClassName="ALUMNOSRow" msprop:Generator_UserTableName="ALUMNOS" msprop:Generator_RowEvArgName="ALUMNOSRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DNI" msprop:Generator_ColumnVarNameInTable="columnDNI" msprop:Generator_ColumnPropNameInRow="DNI" msprop:Generator_ColumnPropNameInTable="DNIColumn" msprop:Generator_UserColumnName="DNI">
@@ -234,7 +234,7 @@ WHERE        (DEPARTAMENTO = LENGUA)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ASIGNATURA" msprop:Generator_TableClassName="ASIGNATURADataTable" msprop:Generator_TableVarName="tableASIGNATURA" msprop:Generator_TablePropName="ASIGNATURA" msprop:Generator_RowDeletingName="ASIGNATURARowDeleting" msprop:Generator_RowChangingName="ASIGNATURARowChanging" msprop:Generator_RowEvHandlerName="ASIGNATURARowChangeEventHandler" msprop:Generator_RowDeletedName="ASIGNATURARowDeleted" msprop:Generator_UserTableName="ASIGNATURA" msprop:Generator_RowChangedName="ASIGNATURARowChanged" msprop:Generator_RowEvArgName="ASIGNATURARowChangeEvent" msprop:Generator_RowClassName="ASIGNATURARow">
+        <xs:element name="ASIGNATURA" msprop:Generator_TableClassName="ASIGNATURADataTable" msprop:Generator_TableVarName="tableASIGNATURA" msprop:Generator_RowChangedName="ASIGNATURARowChanged" msprop:Generator_TablePropName="ASIGNATURA" msprop:Generator_RowDeletingName="ASIGNATURARowDeleting" msprop:Generator_RowChangingName="ASIGNATURARowChanging" msprop:Generator_RowEvHandlerName="ASIGNATURARowChangeEventHandler" msprop:Generator_RowDeletedName="ASIGNATURARowDeleted" msprop:Generator_RowClassName="ASIGNATURARow" msprop:Generator_UserTableName="ASIGNATURA" msprop:Generator_RowEvArgName="ASIGNATURARowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_ASIG" msprop:Generator_ColumnVarNameInTable="columnID_ASIG" msprop:Generator_ColumnPropNameInRow="ID_ASIG" msprop:Generator_ColumnPropNameInTable="ID_ASIGColumn" msprop:Generator_UserColumnName="ID_ASIG" type="xs:int" />
@@ -255,7 +255,7 @@ WHERE        (DEPARTAMENTO = LENGUA)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PROFESORES" msprop:Generator_TableClassName="PROFESORESDataTable" msprop:Generator_TableVarName="tablePROFESORES" msprop:Generator_TablePropName="PROFESORES" msprop:Generator_RowDeletingName="PROFESORESRowDeleting" msprop:Generator_RowChangingName="PROFESORESRowChanging" msprop:Generator_RowEvHandlerName="PROFESORESRowChangeEventHandler" msprop:Generator_RowDeletedName="PROFESORESRowDeleted" msprop:Generator_UserTableName="PROFESORES" msprop:Generator_RowChangedName="PROFESORESRowChanged" msprop:Generator_RowEvArgName="PROFESORESRowChangeEvent" msprop:Generator_RowClassName="PROFESORESRow">
+        <xs:element name="PROFESORES" msprop:Generator_TableClassName="PROFESORESDataTable" msprop:Generator_TableVarName="tablePROFESORES" msprop:Generator_RowChangedName="PROFESORESRowChanged" msprop:Generator_TablePropName="PROFESORES" msprop:Generator_RowDeletingName="PROFESORESRowDeleting" msprop:Generator_RowChangingName="PROFESORESRowChanging" msprop:Generator_RowEvHandlerName="PROFESORESRowChangeEventHandler" msprop:Generator_RowDeletedName="PROFESORESRowDeleted" msprop:Generator_RowClassName="PROFESORESRow" msprop:Generator_UserTableName="PROFESORES" msprop:Generator_RowEvArgName="PROFESORESRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DNI" msprop:Generator_ColumnVarNameInTable="columnDNI" msprop:Generator_ColumnPropNameInRow="DNI" msprop:Generator_ColumnPropNameInTable="DNIColumn" msprop:Generator_UserColumnName="DNI">

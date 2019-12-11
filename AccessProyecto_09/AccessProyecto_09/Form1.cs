@@ -192,16 +192,11 @@ namespace AccessProyecto_09
             Application.Exit();
         }
 
-        //MAYORES DE 21 
+        //Btn CONSULTA MAYOR 21 AÑOS
         private void button1_Click(object sender, EventArgs e)
         {
-                        
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //List<Object> res = pROFESORESDataGridView1.SE
-            //this.pROFESORESTableAdapter.FillByProfe(dataAcces_09DataSet.PROFESORES);
+            tablaMayorEdad.Rows.Add(); //Va añadiendo nuevas filas ( vacías de momento )
+            
         }
     }
 }
