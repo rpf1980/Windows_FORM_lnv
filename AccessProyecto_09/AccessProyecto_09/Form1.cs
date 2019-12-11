@@ -164,7 +164,7 @@ namespace AccessProyecto_09
         {
             this.aSIGNATURABindingSource.EndEdit();
             this.aSIGNATURATableAdapter.Update(dataAcces_09DataSet.ASIGNATURA);
-            this.aSIGNATURADataGridView.Refresh();
+            //this.aSIGNATURADataGridView.Refresh();
 
             panelAsig.Enabled = false;
             idBtnGuardarAsig.Enabled = false;
