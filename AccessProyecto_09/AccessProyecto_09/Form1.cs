@@ -190,6 +190,6 @@ namespace AccessProyecto_09
         private void button7_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
+        }       
     }
 }
