@@ -190,6 +190,18 @@ namespace AccessProyecto_09
         private void button7_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }       
+        }
+
+        //MAYORES DE 21 
+        private void button1_Click(object sender, EventArgs e)
+        {
+                        
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //List<Object> res = pROFESORESDataGridView1.SE
+            //this.pROFESORESTableAdapter.FillByProfe(dataAcces_09DataSet.PROFESORES);
+        }
     }
 }

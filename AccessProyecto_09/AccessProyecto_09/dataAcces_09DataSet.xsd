@@ -74,18 +74,7 @@
               <Mapping SourceColumn="TELEFONO" DataSetColumn="TELEFONO" />
               <Mapping SourceColumn="F_NACIM" DataSetColumn="F_NACIM" />
             </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="dataAcces_09ConnectionString (Settings)" DbObjectName="ALUMNOS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        DNI, NOMBRE, DIRECCION, TELEFONO, F_NACIM
-FROM            ALUMNOS
-WHERE        (ALUMNOS.EDAD &gt;= 21)</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </Sources>
+            <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ASIGNATURATableAdapter" GeneratorDataComponentClassName="ASIGNATURATableAdapter" Name="ASIGNATURA" UserDataComponentName="ASIGNATURATableAdapter">
             <MainSource>
@@ -199,7 +188,7 @@ WHERE        (ALUMNOS.EDAD &gt;= 21)</CommandText>
               <DbSource ConnectionRef="dataAcces_09ConnectionString (Settings)" DbObjectName="PROFESORES" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByProfe" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByProfe" GeneratorSourceName="FillByProfe" GetMethodModifier="Public" GetMethodName="GetDataByProfe" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByProfe" UserSourceName="FillByProfe">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        DNI, NOMBRE, DEPARTAMENTO
+                    <CommandText>SELECT        DNI AS Expr1, NOMBRE AS Expr2, DEPARTAMENTO AS Expr3, PROFESORES.*
 FROM            PROFESORES
 WHERE        (DEPARTAMENTO = LENGUA)</CommandText>
                     <Parameters />
@@ -209,28 +198,7 @@ WHERE        (DEPARTAMENTO = LENGUA)</CommandText>
             </Sources>
           </TableAdapter>
         </Tables>
-        <Sources>
-          <DbSource ConnectionRef="dataAcces_09ConnectionString (Settings)" DbObjectName="ALUMNOS" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="queryEdad" MethodsParameterType="CLR" Modifier="Public" Name="queryEdad" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="queryEdad">
-            <SelectCommand>
-              <DbCommand CommandType="Text" ModifiedByUser="true">
-                <CommandText>SELECT        DNI, NOMBRE, DIRECCION, TELEFONO, F_NACIM
-FROM            ALUMNOS
-WHERE        (ALUMNOS.EDAD &gt;= 21)</CommandText>
-                <Parameters />
-              </DbCommand>
-            </SelectCommand>
-          </DbSource>
-          <DbSource ConnectionRef="dataAcces_09ConnectionString (Settings)" DbObjectName="PROFESORES" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="queryProfesor" MethodsParameterType="CLR" Modifier="Public" Name="queryProfesor" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="queryProfesor">
-            <SelectCommand>
-              <DbCommand CommandType="Text" ModifiedByUser="true">
-                <CommandText>SELECT        DNI, NOMBRE, DEPARTAMENTO
-FROM            PROFESORES
-WHERE        (DEPARTAMENTO = LENGUA)</CommandText>
-                <Parameters />
-              </DbCommand>
-            </SelectCommand>
-          </DbSource>
-        </Sources>
+        <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
