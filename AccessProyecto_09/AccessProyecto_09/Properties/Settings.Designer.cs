@@ -33,5 +33,15 @@ namespace AccessProyecto_09.Properties {
                 return ((string)(this["dataAcces_09ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\dataAcces_09.accdb")]
+        public string dataSetConnect {
+            get {
+                return ((string)(this["dataSetConnect"]));
+            }
+        }
     }
 }

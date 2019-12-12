@@ -1818,7 +1818,7 @@ namespace AccessProyecto_09.dataAcces_09DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::AccessProyecto_09.Properties.Settings.Default.dataAcces_09ConnectionString;
+            this._connection.ConnectionString = global::AccessProyecto_09.Properties.Settings.Default.dataSetConnect;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2254,7 +2254,7 @@ namespace AccessProyecto_09.dataAcces_09DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::AccessProyecto_09.Properties.Settings.Default.dataAcces_09ConnectionString;
+            this._connection.ConnectionString = global::AccessProyecto_09.Properties.Settings.Default.dataSetConnect;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2615,22 +2615,17 @@ namespace AccessProyecto_09.dataAcces_09DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::AccessProyecto_09.Properties.Settings.Default.dataAcces_09ConnectionString;
+            this._connection.ConnectionString = global::AccessProyecto_09.Properties.Settings.Default.dataSetConnect;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT DNI, NOMBRE, DEPARTAMENTO FROM PROFESORES";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        DNI AS Expr1, NOMBRE AS Expr2, DEPARTAMENTO AS Expr3, PROFESORES.*\r" +
-                "\nFROM            PROFESORES\r\nWHERE        (DEPARTAMENTO = LENGUA)";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2652,30 +2647,6 @@ namespace AccessProyecto_09.dataAcces_09DataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual dataAcces_09DataSet.PROFESORESDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dataAcces_09DataSet.PROFESORESDataTable dataTable = new dataAcces_09DataSet.PROFESORESDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByProfe(dataAcces_09DataSet.PROFESORESDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual dataAcces_09DataSet.PROFESORESDataTable GetDataByProfe() {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
             dataAcces_09DataSet.PROFESORESDataTable dataTable = new dataAcces_09DataSet.PROFESORESDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

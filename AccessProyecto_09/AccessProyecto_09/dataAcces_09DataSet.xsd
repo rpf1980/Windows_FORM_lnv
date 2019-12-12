@@ -2,14 +2,14 @@
 <xs:schema id="dataAcces_09DataSet" targetNamespace="http://tempuri.org/dataAcces_09DataSet.xsd" xmlns:mstns="http://tempuri.org/dataAcces_09DataSet.xsd" xmlns="http://tempuri.org/dataAcces_09DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dataAcces_09ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dataAcces_09ConnectionString (Settings)" PropertyReference="ApplicationSettings.AccessProyecto_09.Properties.Settings.GlobalReference.Default.dataAcces_09ConnectionString" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dataSetConnect" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dataSetConnect (Settings)" PropertyReference="ApplicationSettings.AccessProyecto_09.Properties.Settings.GlobalReference.Default.dataSetConnect" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ALUMNOSTableAdapter" GeneratorDataComponentClassName="ALUMNOSTableAdapter" Name="ALUMNOS" UserDataComponentName="ALUMNOSTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="dataAcces_09ConnectionString (Settings)" DbObjectName="ALUMNOS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="dataSetConnect (Settings)" DbObjectName="ALUMNOS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `ALUMNOS` WHERE ((`DNI` = ?) AND ((? = 1 AND `NOMBRE` IS NULL) OR (`NOMBRE` = ?)) AND ((? = 1 AND `DIRECCION` IS NULL) OR (`DIRECCION` = ?)) AND ((? = 1 AND `TELEFONO` IS NULL) OR (`TELEFONO` = ?)) AND ((? = 1 AND `F_NACIM` IS NULL) OR (`F_NACIM` = ?)))</CommandText>
@@ -78,7 +78,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ASIGNATURATableAdapter" GeneratorDataComponentClassName="ASIGNATURATableAdapter" Name="ASIGNATURA" UserDataComponentName="ASIGNATURATableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="dataAcces_09ConnectionString (Settings)" DbObjectName="ASIGNATURA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="dataSetConnect (Settings)" DbObjectName="ASIGNATURA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `ASIGNATURA` WHERE ((`ID_ASIG` = ?) AND ((? = 1 AND `NOMBRE` IS NULL) OR (`NOMBRE` = ?)) AND ((? = 1 AND `DNI_PROF` IS NULL) OR (`DNI_PROF` = ?)))</CommandText>
@@ -133,7 +133,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PROFESORESTableAdapter" GeneratorDataComponentClassName="PROFESORESTableAdapter" Name="PROFESORES" UserDataComponentName="PROFESORESTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="dataAcces_09ConnectionString (Settings)" DbObjectName="PROFESORES" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="dataSetConnect (Settings)" DbObjectName="PROFESORES" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `PROFESORES` WHERE ((`DNI` = ?) AND ((? = 1 AND `NOMBRE` IS NULL) OR (`NOMBRE` = ?)) AND ((? = 1 AND `DEPARTAMENTO` IS NULL) OR (`DEPARTAMENTO` = ?)))</CommandText>
@@ -184,18 +184,7 @@
               <Mapping SourceColumn="NOMBRE" DataSetColumn="NOMBRE" />
               <Mapping SourceColumn="DEPARTAMENTO" DataSetColumn="DEPARTAMENTO" />
             </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="dataAcces_09ConnectionString (Settings)" DbObjectName="PROFESORES" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByProfe" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByProfe" GeneratorSourceName="FillByProfe" GetMethodModifier="Public" GetMethodName="GetDataByProfe" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByProfe" UserSourceName="FillByProfe">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        DNI AS Expr1, NOMBRE AS Expr2, DEPARTAMENTO AS Expr3, PROFESORES.*
-FROM            PROFESORES
-WHERE        (DEPARTAMENTO = LENGUA)</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </Sources>
+            <Sources />
           </TableAdapter>
         </Tables>
         <Sources />
@@ -205,7 +194,7 @@ WHERE        (DEPARTAMENTO = LENGUA)</CommandText>
   <xs:element name="dataAcces_09DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dataAcces_09DataSet" msprop:Generator_UserDSName="dataAcces_09DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ALUMNOS" msprop:Generator_TableClassName="ALUMNOSDataTable" msprop:Generator_TableVarName="tableALUMNOS" msprop:Generator_RowChangedName="ALUMNOSRowChanged" msprop:Generator_TablePropName="ALUMNOS" msprop:Generator_RowDeletingName="ALUMNOSRowDeleting" msprop:Generator_RowChangingName="ALUMNOSRowChanging" msprop:Generator_RowEvHandlerName="ALUMNOSRowChangeEventHandler" msprop:Generator_RowDeletedName="ALUMNOSRowDeleted" msprop:Generator_RowClassName="ALUMNOSRow" msprop:Generator_UserTableName="ALUMNOS" msprop:Generator_RowEvArgName="ALUMNOSRowChangeEvent">
+        <xs:element name="ALUMNOS" msprop:Generator_TableClassName="ALUMNOSDataTable" msprop:Generator_TableVarName="tableALUMNOS" msprop:Generator_TablePropName="ALUMNOS" msprop:Generator_RowDeletingName="ALUMNOSRowDeleting" msprop:Generator_RowChangingName="ALUMNOSRowChanging" msprop:Generator_RowEvHandlerName="ALUMNOSRowChangeEventHandler" msprop:Generator_RowDeletedName="ALUMNOSRowDeleted" msprop:Generator_UserTableName="ALUMNOS" msprop:Generator_RowChangedName="ALUMNOSRowChanged" msprop:Generator_RowEvArgName="ALUMNOSRowChangeEvent" msprop:Generator_RowClassName="ALUMNOSRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DNI" msprop:Generator_ColumnVarNameInTable="columnDNI" msprop:Generator_ColumnPropNameInRow="DNI" msprop:Generator_ColumnPropNameInTable="DNIColumn" msprop:Generator_UserColumnName="DNI">
@@ -234,7 +223,7 @@ WHERE        (DEPARTAMENTO = LENGUA)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ASIGNATURA" msprop:Generator_TableClassName="ASIGNATURADataTable" msprop:Generator_TableVarName="tableASIGNATURA" msprop:Generator_RowChangedName="ASIGNATURARowChanged" msprop:Generator_TablePropName="ASIGNATURA" msprop:Generator_RowDeletingName="ASIGNATURARowDeleting" msprop:Generator_RowChangingName="ASIGNATURARowChanging" msprop:Generator_RowEvHandlerName="ASIGNATURARowChangeEventHandler" msprop:Generator_RowDeletedName="ASIGNATURARowDeleted" msprop:Generator_RowClassName="ASIGNATURARow" msprop:Generator_UserTableName="ASIGNATURA" msprop:Generator_RowEvArgName="ASIGNATURARowChangeEvent">
+        <xs:element name="ASIGNATURA" msprop:Generator_TableClassName="ASIGNATURADataTable" msprop:Generator_TableVarName="tableASIGNATURA" msprop:Generator_TablePropName="ASIGNATURA" msprop:Generator_RowDeletingName="ASIGNATURARowDeleting" msprop:Generator_RowChangingName="ASIGNATURARowChanging" msprop:Generator_RowEvHandlerName="ASIGNATURARowChangeEventHandler" msprop:Generator_RowDeletedName="ASIGNATURARowDeleted" msprop:Generator_UserTableName="ASIGNATURA" msprop:Generator_RowChangedName="ASIGNATURARowChanged" msprop:Generator_RowEvArgName="ASIGNATURARowChangeEvent" msprop:Generator_RowClassName="ASIGNATURARow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_ASIG" msprop:Generator_ColumnVarNameInTable="columnID_ASIG" msprop:Generator_ColumnPropNameInRow="ID_ASIG" msprop:Generator_ColumnPropNameInTable="ID_ASIGColumn" msprop:Generator_UserColumnName="ID_ASIG" type="xs:int" />
@@ -255,7 +244,7 @@ WHERE        (DEPARTAMENTO = LENGUA)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PROFESORES" msprop:Generator_TableClassName="PROFESORESDataTable" msprop:Generator_TableVarName="tablePROFESORES" msprop:Generator_RowChangedName="PROFESORESRowChanged" msprop:Generator_TablePropName="PROFESORES" msprop:Generator_RowDeletingName="PROFESORESRowDeleting" msprop:Generator_RowChangingName="PROFESORESRowChanging" msprop:Generator_RowEvHandlerName="PROFESORESRowChangeEventHandler" msprop:Generator_RowDeletedName="PROFESORESRowDeleted" msprop:Generator_RowClassName="PROFESORESRow" msprop:Generator_UserTableName="PROFESORES" msprop:Generator_RowEvArgName="PROFESORESRowChangeEvent">
+        <xs:element name="PROFESORES" msprop:Generator_TableClassName="PROFESORESDataTable" msprop:Generator_TableVarName="tablePROFESORES" msprop:Generator_TablePropName="PROFESORES" msprop:Generator_RowDeletingName="PROFESORESRowDeleting" msprop:Generator_RowChangingName="PROFESORESRowChanging" msprop:Generator_RowEvHandlerName="PROFESORESRowChangeEventHandler" msprop:Generator_RowDeletedName="PROFESORESRowDeleted" msprop:Generator_UserTableName="PROFESORES" msprop:Generator_RowChangedName="PROFESORESRowChanged" msprop:Generator_RowEvArgName="PROFESORESRowChangeEvent" msprop:Generator_RowClassName="PROFESORESRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DNI" msprop:Generator_ColumnVarNameInTable="columnDNI" msprop:Generator_ColumnPropNameInRow="DNI" msprop:Generator_ColumnPropNameInTable="DNIColumn" msprop:Generator_UserColumnName="DNI">

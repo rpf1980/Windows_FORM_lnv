@@ -9,9 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AccessProyecto_09
-{
+{       
     public partial class Form1 : Form
     {
+        int posicion = 0;
+        DataTable t = new DataTable("CONSULTA_EDAD");       
+        DataRow r;
+        List<string> listaResultado = new List<string>();
+
         public Form1()
         {
             InitializeComponent();
@@ -34,8 +39,8 @@ namespace AccessProyecto_09
             // TODO: esta línea de código carga datos en la tabla 'dataAcces_09DataSet.ALUMNOS' Puede moverla o quitarla según sea necesario.
             this.aLUMNOSTableAdapter.Fill(this.dataAcces_09DataSet.ALUMNOS);
 
-            
 
+            
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -197,6 +202,12 @@ namespace AccessProyecto_09
         //Btn CONSULTA MAYOR 21 AÑOS
         private void button1_Click(object sender, EventArgs e)
         {
+            t.Columns.Add("dni", typeof(string));
+            t.Columns.Add("nombre", typeof(string));
+            t.Columns.Add("direccion", typeof(string));
+            t.Columns.Add("telefono", typeof(int));
+            t.Columns.Add("fecha", typeof(DateTime));
+
             //Recorremos la tabla alumnos para buscar la consulta ( edad > 21 )
 
             for (int i = 0; i < dataAcces_09DataSet.ALUMNOS.Rows.Count; i++)
@@ -207,11 +218,20 @@ namespace AccessProyecto_09
                     int edad = DateTime.Today.AddTicks(-nacimiento.Ticks).Year - 1;
 
                     if (edad > 21)
-                    {                     
+                    {
+                        r = t.NewRow();
+                        r["dni"] = dataAcces_09DataSet.ALUMNOS.Rows[i]["DNI"].ToString();
+                        r["nombre"] = dataAcces_09DataSet.ALUMNOS.Rows[i]["NOMBRE"].ToString();
+                        r["direccion"] = dataAcces_09DataSet.ALUMNOS.Rows[i]["DIRECCION"].ToString();
+                        r["telefono"] = dataAcces_09DataSet.ALUMNOS.Rows[i]["TELEFONO"].ToString();
+                        r["fecha"] = dataAcces_09DataSet.ALUMNOS.Rows[i]["F_NACIM"].ToString();
+                        t.Rows.Add(r);
+
                         //MENSAJE DE PRUEBA
                         MessageBox.Show(dataAcces_09DataSet.ALUMNOS.Rows[i]["NOMBRE"].ToString());
 
-                        //tablaMayorEdad.DataSource(
+                        //Vamos guardando en la tabla creada ( CONSULTA_EDAD ) los strings de los campos del alumno encontrado
+                        //tablaMayorEdad.Add
 
                         //Sobre un array de object vamos guardando los alumnos encontrados
 
@@ -220,6 +240,6 @@ namespace AccessProyecto_09
                     }
                 }                
             }
-        }
+        } 
     }
 }
