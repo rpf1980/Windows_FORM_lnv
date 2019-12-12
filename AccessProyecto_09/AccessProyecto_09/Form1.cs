@@ -209,33 +209,28 @@ namespace AccessProyecto_09
             t.Columns.Add("fecha", typeof(DateTime));
 
             //Recorremos la tabla alumnos para buscar la consulta ( edad > 21 )
-
+            
             for (int i = 0; i < dataAcces_09DataSet.ALUMNOS.Rows.Count; i++)
             {
-                for (int j = 0; j < tablaMayorEdad.Rows.Count; j++)
-                {
-                    DateTime nacimiento = Convert.ToDateTime(dataAcces_09DataSet.ALUMNOS.Rows[i]["F_NACIM"].ToString());
-                    int edad = DateTime.Today.AddTicks(-nacimiento.Ticks).Year - 1;
+                DateTime nacimiento = Convert.ToDateTime(dataAcces_09DataSet.ALUMNOS.Rows[i]["F_NACIM"].ToString());
+                int edad = DateTime.Today.AddTicks(-nacimiento.Ticks).Year - 1;
 
-                    if (edad > 21)
-                    {
-                        // Creamos un array con los valores que vamos a insertar
-                        // en el segundo control DataGridView.
-                        object[] valores = {dataAcces_09DataSet.ALUMNOS.Rows[i]["DNI"].ToString(),
+                if (edad > 21)
+                {
+                    MessageBox.Show(dataAcces_09DataSet.ALUMNOS.Rows[i]["NOMBRE"].ToString());
+                    //Creamos un array con los valores que vamos a insertar
+                    // en el segundo control DataGridView.
+                    object[] valores = {dataAcces_09DataSet.ALUMNOS.Rows[i]["DNI"].ToString(),
                                             dataAcces_09DataSet.ALUMNOS.Rows[i]["NOMBRE"].ToString(),
                                             dataAcces_09DataSet.ALUMNOS.Rows[i]["DIRECCION"].ToString(),
                                             dataAcces_09DataSet.ALUMNOS.Rows[i]["TELEFONO"].ToString(),
                                             dataAcces_09DataSet.ALUMNOS.Rows[i]["F_NACIM"].ToString()};
 
-                        //Creamos un nuevo objeto DataGridRow()
-                        DataGridViewRow row = new DataGridViewRow();
+                }
 
-                        // Creamos las celdas y las rellenamos con los valores existentes
-                        // en el array.
-
-                        //https://social.msdn.microsoft.com/Forums/es-ES/0587f655-d437-4270-837d-5c3707e68cc5/pasar-filas-seleccionadas-de-un-datagridview-a-otro-y-ese-otro-convertirlo-en-un-datatable-c-2010?forum=netfxes
-                        row.CreateCells(aLUMNOSDataGridView, valores);
-                    }
+                for (int j = 0; j < tablaMayorEdad.Rows.Count; j++)
+                {
+                    
                 }                
             }
         } 
