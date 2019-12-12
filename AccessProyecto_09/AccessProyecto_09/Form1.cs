@@ -207,8 +207,11 @@ namespace AccessProyecto_09
                     int edad = DateTime.Today.AddTicks(-nacimiento.Ticks).Year - 1;
 
                     if (edad > 21)
-                    {                       
+                    {                     
+                        //MENSAJE DE PRUEBA
                         MessageBox.Show(dataAcces_09DataSet.ALUMNOS.Rows[i]["NOMBRE"].ToString());
+
+                        //tablaMayorEdad.DataSource(
 
                         //Sobre un array de object vamos guardando los alumnos encontrados
 
