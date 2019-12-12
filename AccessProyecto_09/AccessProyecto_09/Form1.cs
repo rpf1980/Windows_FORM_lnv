@@ -34,6 +34,8 @@ namespace AccessProyecto_09
             // TODO: esta línea de código carga datos en la tabla 'dataAcces_09DataSet.ALUMNOS' Puede moverla o quitarla según sea necesario.
             this.aLUMNOSTableAdapter.Fill(this.dataAcces_09DataSet.ALUMNOS);
 
+            
+
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -195,8 +197,26 @@ namespace AccessProyecto_09
         //Btn CONSULTA MAYOR 21 AÑOS
         private void button1_Click(object sender, EventArgs e)
         {
-            tablaMayorEdad.Rows.Add(); //Va añadiendo nuevas filas ( vacías de momento )
-            
+            //Recorremos la tabla alumnos para buscar la consulta ( edad > 21 )
+
+            for (int i = 0; i < dataAcces_09DataSet.ALUMNOS.Rows.Count; i++)
+            {
+                for (int j = 0; j < tablaMayorEdad.Rows.Count; j++)
+                {
+                    DateTime nacimiento = Convert.ToDateTime(dataAcces_09DataSet.ALUMNOS.Rows[i]["F_NACIM"].ToString());
+                    int edad = DateTime.Today.AddTicks(-nacimiento.Ticks).Year - 1;
+
+                    if (edad > 21)
+                    {                       
+                        MessageBox.Show(dataAcces_09DataSet.ALUMNOS.Rows[i]["NOMBRE"].ToString());
+
+                        //Sobre un array de object vamos guardando los alumnos encontrados
+
+                        //Le pasamos el rray de object el la línea de código siguiente
+                        //tablaMayorEdad.Rows.Add();                       
+                    }
+                }                
+            }
         }
     }
 }
