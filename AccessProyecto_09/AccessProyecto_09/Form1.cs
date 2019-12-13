@@ -200,13 +200,14 @@ namespace AccessProyecto_09
         }
 
         //Btn CONSULTA MAYOR 21 AÑOS
+        
         private void button1_Click(object sender, EventArgs e)
         {
-            t.Columns.Add("dni", typeof(string));
-            t.Columns.Add("nombre", typeof(string));
-            t.Columns.Add("direccion", typeof(string));
-            t.Columns.Add("telefono", typeof(int));
-            t.Columns.Add("fecha", typeof(DateTime));
+            //t.Columns.Add("dni", typeof(string));
+            //t.Columns.Add("nombre", typeof(string));
+            //t.Columns.Add("direccion", typeof(string));
+            //t.Columns.Add("telefono", typeof(int));
+            //t.Columns.Add("fecha", typeof(DateTime));
 
             //Recorremos la tabla alumnos para buscar la consulta ( edad > 21 )
             
@@ -218,19 +219,24 @@ namespace AccessProyecto_09
                 if (edad > 21)
                 {
                     MessageBox.Show(dataAcces_09DataSet.ALUMNOS.Rows[i]["NOMBRE"].ToString());
+                    
                     //Creamos un array con los valores que vamos a insertar
                     // en el segundo control DataGridView.
-                    object[] valores = {dataAcces_09DataSet.ALUMNOS.Rows[i]["DNI"].ToString(),
-                                            dataAcces_09DataSet.ALUMNOS.Rows[i]["NOMBRE"].ToString(),
-                                            dataAcces_09DataSet.ALUMNOS.Rows[i]["DIRECCION"].ToString(),
-                                            dataAcces_09DataSet.ALUMNOS.Rows[i]["TELEFONO"].ToString(),
-                                            dataAcces_09DataSet.ALUMNOS.Rows[i]["F_NACIM"].ToString()};
+                    //object[] valores = {dataAcces_09DataSet.ALUMNOS.Rows[i]["DNI"].ToString(),
+                    //                        dataAcces_09DataSet.ALUMNOS.Rows[i]["NOMBRE"].ToString(),
+                    //                        dataAcces_09DataSet.ALUMNOS.Rows[i]["DIRECCION"].ToString(),
+                    //                        dataAcces_09DataSet.ALUMNOS.Rows[i]["TELEFONO"].ToString(),
+                    //                        dataAcces_09DataSet.ALUMNOS.Rows[i]["F_NACIM"].ToString()};
 
-                }
-
-                for (int j = 0; j < tablaMayorEdad.Rows.Count; j++)
-                {
-                    
+                    for (int j = 0; j < tablaMayorEdad.Rows.Count; j++)
+                    {
+                        int n = tablaMayorEdad.Rows.Add();
+                        tablaMayorEdad.Rows[n].Cells[j].Value = dataAcces_09DataSet.ALUMNOS.Rows[i]["DNI"].ToString();
+                        tablaMayorEdad.Rows[n].Cells[j].Value = dataAcces_09DataSet.ALUMNOS.Rows[i]["NOMBRE"].ToString();
+                        tablaMayorEdad.Rows[n].Cells[j].Value = dataAcces_09DataSet.ALUMNOS.Rows[i]["DIRECCION"].ToString();
+                        tablaMayorEdad.Rows[n].Cells[j].Value = dataAcces_09DataSet.ALUMNOS.Rows[i]["TELEFONO"].ToString();
+                        tablaMayorEdad.Rows[n].Cells[j].Value = dataAcces_09DataSet.ALUMNOS.Rows[i]["F_NACIM"].ToString();
+                    }
                 }                
             }
         } 

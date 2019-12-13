@@ -98,16 +98,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.tablaMayorEdad = new System.Windows.Forms.DataGridView();
-            this.dataAcces09DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aLUMNOSTableAdapter = new AccessProyecto_09.dataAcces_09DataSetTableAdapters.ALUMNOSTableAdapter();
-            this.tableAdapterManager = new AccessProyecto_09.dataAcces_09DataSetTableAdapters.TableAdapterManager();
-            this.pROFESORESTableAdapter = new AccessProyecto_09.dataAcces_09DataSetTableAdapters.PROFESORESTableAdapter();
-            this.aSIGNATURATableAdapter = new AccessProyecto_09.dataAcces_09DataSetTableAdapters.ASIGNATURATableAdapter();
             this.columna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataAcces09DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aLUMNOSTableAdapter = new AccessProyecto_09.dataAcces_09DataSetTableAdapters.ALUMNOSTableAdapter();
+            this.tableAdapterManager = new AccessProyecto_09.dataAcces_09DataSetTableAdapters.TableAdapterManager();
+            this.pROFESORESTableAdapter = new AccessProyecto_09.dataAcces_09DataSetTableAdapters.PROFESORESTableAdapter();
+            this.aSIGNATURATableAdapter = new AccessProyecto_09.dataAcces_09DataSetTableAdapters.ASIGNATURATableAdapter();
             dNILabel = new System.Windows.Forms.Label();
             nOMBRELabel = new System.Windows.Forms.Label();
             dIRECCIONLabel = new System.Windows.Forms.Label();
@@ -141,99 +141,110 @@
             // dNILabel
             // 
             dNILabel.AutoSize = true;
-            dNILabel.Location = new System.Drawing.Point(12, 23);
+            dNILabel.Location = new System.Drawing.Point(9, 19);
+            dNILabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             dNILabel.Name = "dNILabel";
-            dNILabel.Size = new System.Drawing.Size(53, 20);
+            dNILabel.Size = new System.Drawing.Size(44, 17);
             dNILabel.TabIndex = 2;
             dNILabel.Text = "DNI:";
             // 
             // nOMBRELabel
             // 
             nOMBRELabel.AutoSize = true;
-            nOMBRELabel.Location = new System.Drawing.Point(12, 66);
+            nOMBRELabel.Location = new System.Drawing.Point(9, 54);
+            nOMBRELabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nOMBRELabel.Name = "nOMBRELabel";
-            nOMBRELabel.Size = new System.Drawing.Size(98, 20);
+            nOMBRELabel.Size = new System.Drawing.Size(82, 17);
             nOMBRELabel.TabIndex = 4;
             nOMBRELabel.Text = "NOMBRE:";
             // 
             // dIRECCIONLabel
             // 
             dIRECCIONLabel.AutoSize = true;
-            dIRECCIONLabel.Location = new System.Drawing.Point(12, 112);
+            dIRECCIONLabel.Location = new System.Drawing.Point(9, 91);
+            dIRECCIONLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             dIRECCIONLabel.Name = "dIRECCIONLabel";
-            dIRECCIONLabel.Size = new System.Drawing.Size(125, 20);
+            dIRECCIONLabel.Size = new System.Drawing.Size(107, 17);
             dIRECCIONLabel.TabIndex = 6;
             dIRECCIONLabel.Text = "DIRECCION:";
             // 
             // tELEFONOLabel
             // 
             tELEFONOLabel.AutoSize = true;
-            tELEFONOLabel.Location = new System.Drawing.Point(12, 156);
+            tELEFONOLabel.Location = new System.Drawing.Point(9, 127);
+            tELEFONOLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             tELEFONOLabel.Name = "tELEFONOLabel";
-            tELEFONOLabel.Size = new System.Drawing.Size(116, 20);
+            tELEFONOLabel.Size = new System.Drawing.Size(97, 17);
             tELEFONOLabel.TabIndex = 8;
             tELEFONOLabel.Text = "TELEFONO:";
             // 
             // f_NACIMLabel
             // 
             f_NACIMLabel.AutoSize = true;
-            f_NACIMLabel.Location = new System.Drawing.Point(12, 198);
+            f_NACIMLabel.Location = new System.Drawing.Point(9, 161);
+            f_NACIMLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             f_NACIMLabel.Name = "f_NACIMLabel";
-            f_NACIMLabel.Size = new System.Drawing.Size(97, 20);
+            f_NACIMLabel.Size = new System.Drawing.Size(82, 17);
             f_NACIMLabel.TabIndex = 10;
             f_NACIMLabel.Text = "F NACIM:";
             // 
             // dNILabel1
             // 
             dNILabel1.AutoSize = true;
-            dNILabel1.Location = new System.Drawing.Point(21, 25);
+            dNILabel1.Location = new System.Drawing.Point(16, 20);
+            dNILabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             dNILabel1.Name = "dNILabel1";
-            dNILabel1.Size = new System.Drawing.Size(53, 20);
+            dNILabel1.Size = new System.Drawing.Size(44, 17);
             dNILabel1.TabIndex = 1;
             dNILabel1.Text = "DNI:";
             // 
             // nOMBRELabel1
             // 
             nOMBRELabel1.AutoSize = true;
-            nOMBRELabel1.Location = new System.Drawing.Point(21, 65);
+            nOMBRELabel1.Location = new System.Drawing.Point(16, 53);
+            nOMBRELabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nOMBRELabel1.Name = "nOMBRELabel1";
-            nOMBRELabel1.Size = new System.Drawing.Size(98, 20);
+            nOMBRELabel1.Size = new System.Drawing.Size(82, 17);
             nOMBRELabel1.TabIndex = 3;
             nOMBRELabel1.Text = "NOMBRE:";
             // 
             // dEPARTAMENTOLabel
             // 
             dEPARTAMENTOLabel.AutoSize = true;
-            dEPARTAMENTOLabel.Location = new System.Drawing.Point(21, 103);
+            dEPARTAMENTOLabel.Location = new System.Drawing.Point(16, 84);
+            dEPARTAMENTOLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             dEPARTAMENTOLabel.Name = "dEPARTAMENTOLabel";
-            dEPARTAMENTOLabel.Size = new System.Drawing.Size(173, 20);
+            dEPARTAMENTOLabel.Size = new System.Drawing.Size(144, 17);
             dEPARTAMENTOLabel.TabIndex = 5;
             dEPARTAMENTOLabel.Text = "DEPARTAMENTO:";
             // 
             // iD_ASIGLabel
             // 
             iD_ASIGLabel.AutoSize = true;
-            iD_ASIGLabel.Location = new System.Drawing.Point(17, 27);
+            iD_ASIGLabel.Location = new System.Drawing.Point(13, 22);
+            iD_ASIGLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             iD_ASIGLabel.Name = "iD_ASIGLabel";
-            iD_ASIGLabel.Size = new System.Drawing.Size(93, 20);
+            iD_ASIGLabel.Size = new System.Drawing.Size(78, 17);
             iD_ASIGLabel.TabIndex = 1;
             iD_ASIGLabel.Text = "ID ASIG:";
             // 
             // nOMBRELabel2
             // 
             nOMBRELabel2.AutoSize = true;
-            nOMBRELabel2.Location = new System.Drawing.Point(17, 70);
+            nOMBRELabel2.Location = new System.Drawing.Point(13, 57);
+            nOMBRELabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nOMBRELabel2.Name = "nOMBRELabel2";
-            nOMBRELabel2.Size = new System.Drawing.Size(98, 20);
+            nOMBRELabel2.Size = new System.Drawing.Size(82, 17);
             nOMBRELabel2.TabIndex = 3;
             nOMBRELabel2.Text = "NOMBRE:";
             // 
             // dNI_PROFLabel
             // 
             dNI_PROFLabel.AutoSize = true;
-            dNI_PROFLabel.Location = new System.Drawing.Point(17, 114);
+            dNI_PROFLabel.Location = new System.Drawing.Point(13, 93);
+            dNI_PROFLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             dNI_PROFLabel.Name = "dNI_PROFLabel";
-            dNI_PROFLabel.Size = new System.Drawing.Size(109, 20);
+            dNI_PROFLabel.Size = new System.Drawing.Size(91, 17);
             dNI_PROFLabel.TabIndex = 5;
             dNI_PROFLabel.Text = "DNI PROF:";
             // 
@@ -247,11 +258,11 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(3, 12);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl1.Location = new System.Drawing.Point(2, 10);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1362, 803);
+            this.tabControl1.Size = new System.Drawing.Size(1022, 652);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -266,11 +277,11 @@
             this.tabPage1.Controls.Add(this.idBtnAddAlumno);
             this.tabPage1.Controls.Add(this.panelAlumno);
             this.tabPage1.Controls.Add(this.aLUMNOSDataGridView);
-            this.tabPage1.Location = new System.Drawing.Point(4, 27);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 23);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1354, 772);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Size = new System.Drawing.Size(1014, 625);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "ALUMNOS";
             // 
@@ -278,9 +289,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(97, 53);
+            this.label1.Location = new System.Drawing.Point(73, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(294, 59);
+            this.label1.Size = new System.Drawing.Size(232, 46);
             this.label1.TabIndex = 7;
             this.label1.Text = "ALUMNOS";
             // 
@@ -288,10 +300,10 @@
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button5.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(910, 685);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Location = new System.Drawing.Point(682, 557);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(269, 46);
+            this.button5.Size = new System.Drawing.Size(202, 37);
             this.button5.TabIndex = 6;
             this.button5.Text = "SALIR";
             this.button5.UseVisualStyleBackColor = false;
@@ -301,10 +313,10 @@
             // 
             this.idBtnEliminarAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.idBtnEliminarAlumno.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idBtnEliminarAlumno.Location = new System.Drawing.Point(910, 619);
-            this.idBtnEliminarAlumno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idBtnEliminarAlumno.Location = new System.Drawing.Point(682, 503);
+            this.idBtnEliminarAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idBtnEliminarAlumno.Name = "idBtnEliminarAlumno";
-            this.idBtnEliminarAlumno.Size = new System.Drawing.Size(269, 46);
+            this.idBtnEliminarAlumno.Size = new System.Drawing.Size(202, 37);
             this.idBtnEliminarAlumno.TabIndex = 5;
             this.idBtnEliminarAlumno.Text = "ELIMINAR";
             this.idBtnEliminarAlumno.UseVisualStyleBackColor = false;
@@ -314,10 +326,10 @@
             // 
             this.idBtnModifAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.idBtnModifAlumno.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idBtnModifAlumno.Location = new System.Drawing.Point(910, 557);
-            this.idBtnModifAlumno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idBtnModifAlumno.Location = new System.Drawing.Point(682, 453);
+            this.idBtnModifAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idBtnModifAlumno.Name = "idBtnModifAlumno";
-            this.idBtnModifAlumno.Size = new System.Drawing.Size(269, 46);
+            this.idBtnModifAlumno.Size = new System.Drawing.Size(202, 37);
             this.idBtnModifAlumno.TabIndex = 4;
             this.idBtnModifAlumno.Text = "MODIFICAR";
             this.idBtnModifAlumno.UseVisualStyleBackColor = false;
@@ -328,10 +340,10 @@
             this.idBtnGuardarAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.idBtnGuardarAlumno.Enabled = false;
             this.idBtnGuardarAlumno.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idBtnGuardarAlumno.Location = new System.Drawing.Point(910, 489);
-            this.idBtnGuardarAlumno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idBtnGuardarAlumno.Location = new System.Drawing.Point(682, 397);
+            this.idBtnGuardarAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idBtnGuardarAlumno.Name = "idBtnGuardarAlumno";
-            this.idBtnGuardarAlumno.Size = new System.Drawing.Size(269, 46);
+            this.idBtnGuardarAlumno.Size = new System.Drawing.Size(202, 37);
             this.idBtnGuardarAlumno.TabIndex = 3;
             this.idBtnGuardarAlumno.Text = "GUARDAR";
             this.idBtnGuardarAlumno.UseVisualStyleBackColor = false;
@@ -341,10 +353,10 @@
             // 
             this.idBtnAddAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.idBtnAddAlumno.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idBtnAddAlumno.Location = new System.Drawing.Point(910, 427);
-            this.idBtnAddAlumno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idBtnAddAlumno.Location = new System.Drawing.Point(682, 347);
+            this.idBtnAddAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idBtnAddAlumno.Name = "idBtnAddAlumno";
-            this.idBtnAddAlumno.Size = new System.Drawing.Size(269, 46);
+            this.idBtnAddAlumno.Size = new System.Drawing.Size(202, 37);
             this.idBtnAddAlumno.TabIndex = 2;
             this.idBtnAddAlumno.Text = "AÑADIR";
             this.idBtnAddAlumno.UseVisualStyleBackColor = false;
@@ -364,19 +376,19 @@
             this.panelAlumno.Controls.Add(this.idTxtDireccAlumno);
             this.panelAlumno.Enabled = false;
             this.panelAlumno.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelAlumno.Location = new System.Drawing.Point(107, 470);
-            this.panelAlumno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelAlumno.Location = new System.Drawing.Point(80, 382);
+            this.panelAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelAlumno.Name = "panelAlumno";
-            this.panelAlumno.Size = new System.Drawing.Size(703, 251);
+            this.panelAlumno.Size = new System.Drawing.Size(527, 204);
             this.panelAlumno.TabIndex = 1;
             // 
             // idTxtNombreAlumno
             // 
             this.idTxtNombreAlumno.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.aLUMNOSBindingSource, "NOMBRE", true));
-            this.idTxtNombreAlumno.Location = new System.Drawing.Point(179, 63);
-            this.idTxtNombreAlumno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idTxtNombreAlumno.Location = new System.Drawing.Point(134, 51);
+            this.idTxtNombreAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idTxtNombreAlumno.Name = "idTxtNombreAlumno";
-            this.idTxtNombreAlumno.Size = new System.Drawing.Size(337, 28);
+            this.idTxtNombreAlumno.Size = new System.Drawing.Size(254, 24);
             this.idTxtNombreAlumno.TabIndex = 5;
             // 
             // aLUMNOSBindingSource
@@ -392,37 +404,37 @@
             // idTxtDniAlumno
             // 
             this.idTxtDniAlumno.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.aLUMNOSBindingSource, "DNI", true));
-            this.idTxtDniAlumno.Location = new System.Drawing.Point(179, 18);
-            this.idTxtDniAlumno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idTxtDniAlumno.Location = new System.Drawing.Point(134, 15);
+            this.idTxtDniAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idTxtDniAlumno.Name = "idTxtDniAlumno";
-            this.idTxtDniAlumno.Size = new System.Drawing.Size(161, 28);
+            this.idTxtDniAlumno.Size = new System.Drawing.Size(122, 24);
             this.idTxtDniAlumno.TabIndex = 3;
             // 
             // f_NACIMDateTimePicker
             // 
             this.f_NACIMDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.aLUMNOSBindingSource, "F_NACIM", true));
-            this.f_NACIMDateTimePicker.Location = new System.Drawing.Point(179, 196);
-            this.f_NACIMDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.f_NACIMDateTimePicker.Location = new System.Drawing.Point(134, 159);
+            this.f_NACIMDateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.f_NACIMDateTimePicker.Name = "f_NACIMDateTimePicker";
-            this.f_NACIMDateTimePicker.Size = new System.Drawing.Size(471, 28);
+            this.f_NACIMDateTimePicker.Size = new System.Drawing.Size(354, 24);
             this.f_NACIMDateTimePicker.TabIndex = 11;
             // 
             // idTxtTlfnAlumno
             // 
             this.idTxtTlfnAlumno.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.aLUMNOSBindingSource, "TELEFONO", true));
-            this.idTxtTlfnAlumno.Location = new System.Drawing.Point(179, 153);
-            this.idTxtTlfnAlumno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idTxtTlfnAlumno.Location = new System.Drawing.Point(134, 124);
+            this.idTxtTlfnAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idTxtTlfnAlumno.Name = "idTxtTlfnAlumno";
-            this.idTxtTlfnAlumno.Size = new System.Drawing.Size(161, 28);
+            this.idTxtTlfnAlumno.Size = new System.Drawing.Size(122, 24);
             this.idTxtTlfnAlumno.TabIndex = 9;
             // 
             // idTxtDireccAlumno
             // 
             this.idTxtDireccAlumno.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.aLUMNOSBindingSource, "DIRECCION", true));
-            this.idTxtDireccAlumno.Location = new System.Drawing.Point(179, 107);
-            this.idTxtDireccAlumno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idTxtDireccAlumno.Location = new System.Drawing.Point(134, 87);
+            this.idTxtDireccAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idTxtDireccAlumno.Name = "idTxtDireccAlumno";
-            this.idTxtDireccAlumno.Size = new System.Drawing.Size(471, 28);
+            this.idTxtDireccAlumno.Size = new System.Drawing.Size(354, 24);
             this.idTxtDireccAlumno.TabIndex = 7;
             // 
             // aLUMNOSDataGridView
@@ -437,12 +449,12 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.aLUMNOSDataGridView.DataSource = this.aLUMNOSBindingSource;
-            this.aLUMNOSDataGridView.Location = new System.Drawing.Point(107, 147);
-            this.aLUMNOSDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.aLUMNOSDataGridView.Location = new System.Drawing.Point(80, 119);
+            this.aLUMNOSDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.aLUMNOSDataGridView.Name = "aLUMNOSDataGridView";
             this.aLUMNOSDataGridView.RowHeadersWidth = 51;
             this.aLUMNOSDataGridView.RowTemplate.Height = 24;
-            this.aLUMNOSDataGridView.Size = new System.Drawing.Size(1073, 265);
+            this.aLUMNOSDataGridView.Size = new System.Drawing.Size(805, 215);
             this.aLUMNOSDataGridView.TabIndex = 0;
             this.aLUMNOSDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.aLUMNOSDataGridView_CellContentClick);
             // 
@@ -497,11 +509,11 @@
             this.tabPage2.Controls.Add(this.idBtnAddProf);
             this.tabPage2.Controls.Add(this.panelProfesor);
             this.tabPage2.Controls.Add(this.pROFESORESDataGridView);
-            this.tabPage2.Location = new System.Drawing.Point(4, 27);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 23);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1354, 772);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Size = new System.Drawing.Size(1014, 625);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "PROFESORES";
             // 
@@ -509,9 +521,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(177, 38);
+            this.label3.Location = new System.Drawing.Point(133, 31);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(383, 59);
+            this.label3.Size = new System.Drawing.Size(303, 46);
             this.label3.TabIndex = 13;
             this.label3.Text = "PROFESORES";
             // 
@@ -519,10 +532,10 @@
             // 
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button6.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(865, 372);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button6.Location = new System.Drawing.Point(649, 302);
+            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(269, 46);
+            this.button6.Size = new System.Drawing.Size(202, 37);
             this.button6.TabIndex = 12;
             this.button6.Text = "SALIR";
             this.button6.UseVisualStyleBackColor = false;
@@ -532,10 +545,10 @@
             // 
             this.idBtnEliminarProf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.idBtnEliminarProf.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idBtnEliminarProf.Location = new System.Drawing.Point(865, 312);
-            this.idBtnEliminarProf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idBtnEliminarProf.Location = new System.Drawing.Point(649, 254);
+            this.idBtnEliminarProf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idBtnEliminarProf.Name = "idBtnEliminarProf";
-            this.idBtnEliminarProf.Size = new System.Drawing.Size(269, 46);
+            this.idBtnEliminarProf.Size = new System.Drawing.Size(202, 37);
             this.idBtnEliminarProf.TabIndex = 11;
             this.idBtnEliminarProf.Text = "ELIMINAR";
             this.idBtnEliminarProf.UseVisualStyleBackColor = false;
@@ -545,10 +558,10 @@
             // 
             this.idBtnModProf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.idBtnModProf.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idBtnModProf.Location = new System.Drawing.Point(865, 250);
-            this.idBtnModProf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idBtnModProf.Location = new System.Drawing.Point(649, 203);
+            this.idBtnModProf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idBtnModProf.Name = "idBtnModProf";
-            this.idBtnModProf.Size = new System.Drawing.Size(269, 46);
+            this.idBtnModProf.Size = new System.Drawing.Size(202, 37);
             this.idBtnModProf.TabIndex = 10;
             this.idBtnModProf.Text = "MODIFICAR";
             this.idBtnModProf.UseVisualStyleBackColor = false;
@@ -559,10 +572,10 @@
             this.idBtnGuardarProf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.idBtnGuardarProf.Enabled = false;
             this.idBtnGuardarProf.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idBtnGuardarProf.Location = new System.Drawing.Point(865, 189);
-            this.idBtnGuardarProf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idBtnGuardarProf.Location = new System.Drawing.Point(649, 154);
+            this.idBtnGuardarProf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idBtnGuardarProf.Name = "idBtnGuardarProf";
-            this.idBtnGuardarProf.Size = new System.Drawing.Size(269, 46);
+            this.idBtnGuardarProf.Size = new System.Drawing.Size(202, 37);
             this.idBtnGuardarProf.TabIndex = 9;
             this.idBtnGuardarProf.Text = "GUARDAR";
             this.idBtnGuardarProf.UseVisualStyleBackColor = false;
@@ -572,10 +585,10 @@
             // 
             this.idBtnAddProf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.idBtnAddProf.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idBtnAddProf.Location = new System.Drawing.Point(865, 128);
-            this.idBtnAddProf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idBtnAddProf.Location = new System.Drawing.Point(649, 104);
+            this.idBtnAddProf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idBtnAddProf.Name = "idBtnAddProf";
-            this.idBtnAddProf.Size = new System.Drawing.Size(269, 46);
+            this.idBtnAddProf.Size = new System.Drawing.Size(202, 37);
             this.idBtnAddProf.TabIndex = 8;
             this.idBtnAddProf.Text = "AÑADIR";
             this.idBtnAddProf.UseVisualStyleBackColor = false;
@@ -591,19 +604,19 @@
             this.panelProfesor.Controls.Add(this.idTxtNombreProf);
             this.panelProfesor.Enabled = false;
             this.panelProfesor.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelProfesor.Location = new System.Drawing.Point(187, 479);
-            this.panelProfesor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelProfesor.Location = new System.Drawing.Point(140, 389);
+            this.panelProfesor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelProfesor.Name = "panelProfesor";
-            this.panelProfesor.Size = new System.Drawing.Size(589, 146);
+            this.panelProfesor.Size = new System.Drawing.Size(442, 119);
             this.panelProfesor.TabIndex = 7;
             // 
             // idTxtDniProf
             // 
             this.idTxtDniProf.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pROFESORESBindingSource, "DNI", true));
-            this.idTxtDniProf.Location = new System.Drawing.Point(229, 22);
-            this.idTxtDniProf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idTxtDniProf.Location = new System.Drawing.Point(172, 18);
+            this.idTxtDniProf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idTxtDniProf.Name = "idTxtDniProf";
-            this.idTxtDniProf.Size = new System.Drawing.Size(153, 28);
+            this.idTxtDniProf.Size = new System.Drawing.Size(116, 24);
             this.idTxtDniProf.TabIndex = 2;
             // 
             // pROFESORESBindingSource
@@ -614,19 +627,19 @@
             // idTxtDepartProf
             // 
             this.idTxtDepartProf.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pROFESORESBindingSource, "DEPARTAMENTO", true));
-            this.idTxtDepartProf.Location = new System.Drawing.Point(229, 101);
-            this.idTxtDepartProf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idTxtDepartProf.Location = new System.Drawing.Point(172, 82);
+            this.idTxtDepartProf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idTxtDepartProf.Name = "idTxtDepartProf";
-            this.idTxtDepartProf.Size = new System.Drawing.Size(217, 28);
+            this.idTxtDepartProf.Size = new System.Drawing.Size(164, 24);
             this.idTxtDepartProf.TabIndex = 6;
             // 
             // idTxtNombreProf
             // 
             this.idTxtNombreProf.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pROFESORESBindingSource, "NOMBRE", true));
-            this.idTxtNombreProf.Location = new System.Drawing.Point(229, 62);
-            this.idTxtNombreProf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idTxtNombreProf.Location = new System.Drawing.Point(172, 50);
+            this.idTxtNombreProf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idTxtNombreProf.Name = "idTxtNombreProf";
-            this.idTxtNombreProf.Size = new System.Drawing.Size(356, 28);
+            this.idTxtNombreProf.Size = new System.Drawing.Size(268, 24);
             this.idTxtNombreProf.TabIndex = 4;
             // 
             // pROFESORESDataGridView
@@ -639,12 +652,12 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.pROFESORESDataGridView.DataSource = this.pROFESORESBindingSource;
-            this.pROFESORESDataGridView.Location = new System.Drawing.Point(187, 128);
-            this.pROFESORESDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pROFESORESDataGridView.Location = new System.Drawing.Point(140, 104);
+            this.pROFESORESDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pROFESORESDataGridView.Name = "pROFESORESDataGridView";
             this.pROFESORESDataGridView.RowHeadersWidth = 51;
             this.pROFESORESDataGridView.RowTemplate.Height = 24;
-            this.pROFESORESDataGridView.Size = new System.Drawing.Size(639, 300);
+            this.pROFESORESDataGridView.Size = new System.Drawing.Size(479, 244);
             this.pROFESORESDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn6
@@ -683,11 +696,11 @@
             this.tabPage3.Controls.Add(this.panelAsig);
             this.tabPage3.Controls.Add(this.aSIGNATURADataGridView);
             this.tabPage3.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage3.Location = new System.Drawing.Point(4, 27);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 23);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Size = new System.Drawing.Size(1354, 772);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Size = new System.Drawing.Size(1014, 625);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "ASIGNATURA";
             // 
@@ -695,9 +708,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(164, 32);
+            this.label4.Location = new System.Drawing.Point(123, 26);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(420, 59);
+            this.label4.Size = new System.Drawing.Size(335, 46);
             this.label4.TabIndex = 14;
             this.label4.Text = "ASIGNATURAS";
             // 
@@ -705,10 +719,10 @@
             // 
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button7.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(831, 359);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button7.Location = new System.Drawing.Point(623, 292);
+            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(269, 46);
+            this.button7.Size = new System.Drawing.Size(202, 37);
             this.button7.TabIndex = 12;
             this.button7.Text = "SALIR";
             this.button7.UseVisualStyleBackColor = false;
@@ -718,10 +732,10 @@
             // 
             this.idBtnEliminarAsig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.idBtnEliminarAsig.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idBtnEliminarAsig.Location = new System.Drawing.Point(831, 300);
-            this.idBtnEliminarAsig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idBtnEliminarAsig.Location = new System.Drawing.Point(623, 244);
+            this.idBtnEliminarAsig.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idBtnEliminarAsig.Name = "idBtnEliminarAsig";
-            this.idBtnEliminarAsig.Size = new System.Drawing.Size(269, 46);
+            this.idBtnEliminarAsig.Size = new System.Drawing.Size(202, 37);
             this.idBtnEliminarAsig.TabIndex = 11;
             this.idBtnEliminarAsig.Text = "ELIMINAR";
             this.idBtnEliminarAsig.UseVisualStyleBackColor = false;
@@ -731,10 +745,10 @@
             // 
             this.idBtnModifAsig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.idBtnModifAsig.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idBtnModifAsig.Location = new System.Drawing.Point(831, 242);
-            this.idBtnModifAsig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idBtnModifAsig.Location = new System.Drawing.Point(623, 197);
+            this.idBtnModifAsig.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idBtnModifAsig.Name = "idBtnModifAsig";
-            this.idBtnModifAsig.Size = new System.Drawing.Size(269, 46);
+            this.idBtnModifAsig.Size = new System.Drawing.Size(202, 37);
             this.idBtnModifAsig.TabIndex = 10;
             this.idBtnModifAsig.Text = "MODIFICAR";
             this.idBtnModifAsig.UseVisualStyleBackColor = false;
@@ -745,10 +759,10 @@
             this.idBtnGuardarAsig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.idBtnGuardarAsig.Enabled = false;
             this.idBtnGuardarAsig.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idBtnGuardarAsig.Location = new System.Drawing.Point(831, 184);
-            this.idBtnGuardarAsig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idBtnGuardarAsig.Location = new System.Drawing.Point(623, 150);
+            this.idBtnGuardarAsig.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idBtnGuardarAsig.Name = "idBtnGuardarAsig";
-            this.idBtnGuardarAsig.Size = new System.Drawing.Size(269, 46);
+            this.idBtnGuardarAsig.Size = new System.Drawing.Size(202, 37);
             this.idBtnGuardarAsig.TabIndex = 9;
             this.idBtnGuardarAsig.Text = "GUARDAR";
             this.idBtnGuardarAsig.UseVisualStyleBackColor = false;
@@ -758,10 +772,10 @@
             // 
             this.idBtnAddAsig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.idBtnAddAsig.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idBtnAddAsig.Location = new System.Drawing.Point(831, 126);
-            this.idBtnAddAsig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idBtnAddAsig.Location = new System.Drawing.Point(623, 102);
+            this.idBtnAddAsig.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idBtnAddAsig.Name = "idBtnAddAsig";
-            this.idBtnAddAsig.Size = new System.Drawing.Size(269, 46);
+            this.idBtnAddAsig.Size = new System.Drawing.Size(202, 37);
             this.idBtnAddAsig.TabIndex = 8;
             this.idBtnAddAsig.Text = "AÑADIR";
             this.idBtnAddAsig.UseVisualStyleBackColor = false;
@@ -777,19 +791,19 @@
             this.panelAsig.Controls.Add(this.idTxtNombreAsig);
             this.panelAsig.Enabled = false;
             this.panelAsig.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelAsig.Location = new System.Drawing.Point(174, 412);
-            this.panelAsig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelAsig.Location = new System.Drawing.Point(130, 335);
+            this.panelAsig.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelAsig.Name = "panelAsig";
-            this.panelAsig.Size = new System.Drawing.Size(431, 162);
+            this.panelAsig.Size = new System.Drawing.Size(323, 132);
             this.panelAsig.TabIndex = 7;
             // 
             // idTxtDniProfAsig
             // 
             this.idTxtDniProfAsig.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.aSIGNATURABindingSource, "DNI_PROF", true));
-            this.idTxtDniProfAsig.Location = new System.Drawing.Point(159, 111);
-            this.idTxtDniProfAsig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idTxtDniProfAsig.Location = new System.Drawing.Point(119, 90);
+            this.idTxtDniProfAsig.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idTxtDniProfAsig.Name = "idTxtDniProfAsig";
-            this.idTxtDniProfAsig.Size = new System.Drawing.Size(160, 28);
+            this.idTxtDniProfAsig.Size = new System.Drawing.Size(121, 24);
             this.idTxtDniProfAsig.TabIndex = 6;
             // 
             // aSIGNATURABindingSource
@@ -800,19 +814,19 @@
             // idTxtIdAsig
             // 
             this.idTxtIdAsig.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.aSIGNATURABindingSource, "ID_ASIG", true));
-            this.idTxtIdAsig.Location = new System.Drawing.Point(159, 23);
-            this.idTxtIdAsig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idTxtIdAsig.Location = new System.Drawing.Point(119, 19);
+            this.idTxtIdAsig.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idTxtIdAsig.Name = "idTxtIdAsig";
-            this.idTxtIdAsig.Size = new System.Drawing.Size(81, 28);
+            this.idTxtIdAsig.Size = new System.Drawing.Size(62, 24);
             this.idTxtIdAsig.TabIndex = 2;
             // 
             // idTxtNombreAsig
             // 
             this.idTxtNombreAsig.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.aSIGNATURABindingSource, "NOMBRE", true));
-            this.idTxtNombreAsig.Location = new System.Drawing.Point(159, 66);
-            this.idTxtNombreAsig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.idTxtNombreAsig.Location = new System.Drawing.Point(119, 54);
+            this.idTxtNombreAsig.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idTxtNombreAsig.Name = "idTxtNombreAsig";
-            this.idTxtNombreAsig.Size = new System.Drawing.Size(255, 28);
+            this.idTxtNombreAsig.Size = new System.Drawing.Size(192, 24);
             this.idTxtNombreAsig.TabIndex = 4;
             // 
             // aSIGNATURADataGridView
@@ -825,12 +839,12 @@
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11});
             this.aSIGNATURADataGridView.DataSource = this.aSIGNATURABindingSource;
-            this.aSIGNATURADataGridView.Location = new System.Drawing.Point(174, 126);
-            this.aSIGNATURADataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.aSIGNATURADataGridView.Location = new System.Drawing.Point(130, 102);
+            this.aSIGNATURADataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.aSIGNATURADataGridView.Name = "aSIGNATURADataGridView";
             this.aSIGNATURADataGridView.RowHeadersWidth = 51;
             this.aSIGNATURADataGridView.RowTemplate.Height = 24;
-            this.aSIGNATURADataGridView.Size = new System.Drawing.Size(585, 244);
+            this.aSIGNATURADataGridView.Size = new System.Drawing.Size(439, 198);
             this.aSIGNATURADataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn9
@@ -863,11 +877,11 @@
             this.tabPage4.Controls.Add(this.label2);
             this.tabPage4.Controls.Add(this.button1);
             this.tabPage4.Controls.Add(this.tablaMayorEdad);
-            this.tabPage4.Location = new System.Drawing.Point(4, 27);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage4.Location = new System.Drawing.Point(4, 23);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage4.Size = new System.Drawing.Size(1354, 772);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Size = new System.Drawing.Size(1014, 625);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "ALUMNOS MAYORES DE 21 AÑOS";
             // 
@@ -875,10 +889,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(120, 64);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(90, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(836, 53);
+            this.label2.Size = new System.Drawing.Size(668, 42);
             this.label2.TabIndex = 2;
             this.label2.Text = "ALUMNOS MAYORES DE 21 AÑOS";
             // 
@@ -886,10 +899,10 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(995, 400);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(746, 325);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(207, 58);
+            this.button1.Size = new System.Drawing.Size(155, 47);
             this.button1.TabIndex = 1;
             this.button1.Text = "CONSULTAR";
             this.button1.UseVisualStyleBackColor = false;
@@ -905,38 +918,13 @@
             this.columna3,
             this.columna4,
             this.columna5});
-            this.tablaMayorEdad.Location = new System.Drawing.Point(130, 148);
-            this.tablaMayorEdad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tablaMayorEdad.Location = new System.Drawing.Point(106, 119);
+            this.tablaMayorEdad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tablaMayorEdad.Name = "tablaMayorEdad";
             this.tablaMayorEdad.RowHeadersWidth = 51;
             this.tablaMayorEdad.RowTemplate.Height = 24;
-            this.tablaMayorEdad.Size = new System.Drawing.Size(1072, 223);
+            this.tablaMayorEdad.Size = new System.Drawing.Size(804, 181);
             this.tablaMayorEdad.TabIndex = 0;
-            // 
-            // dataAcces09DataSetBindingSource
-            // 
-            this.dataAcces09DataSetBindingSource.DataSource = this.dataAcces_09DataSet;
-            this.dataAcces09DataSetBindingSource.Position = 0;
-            // 
-            // aLUMNOSTableAdapter
-            // 
-            this.aLUMNOSTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.ALUMNOSTableAdapter = this.aLUMNOSTableAdapter;
-            this.tableAdapterManager.ASIGNATURATableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.PROFESORESTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = AccessProyecto_09.dataAcces_09DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // pROFESORESTableAdapter
-            // 
-            this.pROFESORESTableAdapter.ClearBeforeFill = true;
-            // 
-            // aSIGNATURATableAdapter
-            // 
-            this.aSIGNATURATableAdapter.ClearBeforeFill = true;
             // 
             // columna1
             // 
@@ -973,14 +961,39 @@
             this.columna5.Name = "columna5";
             this.columna5.Width = 110;
             // 
+            // dataAcces09DataSetBindingSource
+            // 
+            this.dataAcces09DataSetBindingSource.DataSource = this.dataAcces_09DataSet;
+            this.dataAcces09DataSetBindingSource.Position = 0;
+            // 
+            // aLUMNOSTableAdapter
+            // 
+            this.aLUMNOSTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ALUMNOSTableAdapter = this.aLUMNOSTableAdapter;
+            this.tableAdapterManager.ASIGNATURATableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.PROFESORESTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = AccessProyecto_09.dataAcces_09DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // pROFESORESTableAdapter
+            // 
+            this.pROFESORESTableAdapter.ClearBeforeFill = true;
+            // 
+            // aSIGNATURATableAdapter
+            // 
+            this.aSIGNATURATableAdapter.ClearBeforeFill = true;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1369, 816);
+            this.ClientSize = new System.Drawing.Size(1027, 609);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
